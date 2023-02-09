@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" rel="stylesheet">
+    <script defer src="script.js"></script>
+
+    <title>My Quiz</title>
+</head>
+<body>
+    <div id="game">
+        <h1 id="lesson-title">Lesson Title</h1>
+        <div id="player-progress">
+            <ul>
+                <li class="progress" id="question-number">Question <label for="" id="current-question-number">1</label> of <label for="" id="question-total-number">0</label>
+                
+                </li>
+                <li class="progress" id="your-score">Your Score: <label for="" id="score">0</label></li>
+                <li class="progress" id="your-lives">Your Lives: <label for="" id="lives">0</label></li>
+            </ul>
+        </div>
+        
+        <div id="instructions">Answer this:</div>
+
+        <div id="question"><p>What is the answer to life, the universe and everything?</p></div>
+
+
+        <div id="answer-section">
+            <button onclick="checkAnswer(this.id)" class="answer-btn" id="btn1">Answer 1</button>
+            <button onclick="checkAnswer(this.id)" class="answer-btn" id="btn2">Answer 2</button>
+            <button onclick="checkAnswer(this.id)" class="answer-btn" id="btn3">Answer 3</button>
+            <button onclick="checkAnswer(this.id)" class="answer-btn" id="btn4">Answer 4</button>
+            <button onclick="checkAnswer(this.id)" class="answer-btn" id="btn5">Answer 5</button>
+            <button onclick="checkAnswer(this.id)" class="answer-btn" id="btn6">Answer 42</button>
+            <button onclick="checkAnswer(this.id)" class="answer-btn" id="btn7">Answer 7</button>
+            <button onclick="checkAnswer(this.id)" class="answer-btn" id="btn8">Answer 8</button>
+        </div>
+            <button onclick="nextQuestion()" id="next-question" class="btnNav">Next</button>
+        
+
+        <div id="game-over">
+            <h1 id="game-over-heading">Game Over</h1>
+            <p class="game-over-won" id="game-over-won">Wow! Du bist großartig!</p>
+            <p class="game-over-lost" id="game-over-lost">Unfortunately, you ran out of lives. Better luck next time!</p>
+            <button class="game-again-lost" id="btn-game-lost" onClick="window.location.reload();">Play Again</button>
+            <button class="game-over-won" id="btn-game-won" onClick="window.location.reload();">Try Again</button>
+            <!-- TODO: FIX -->
+            <button onclick="window.location.href='/code';">Go Back</button>
+        </div>
+
+
+    </div>
+    <div id="result-section">
+        <h1 id="result-heading">Correct or not?</h1>
+        <p id="result-body">You will be told here</p>
+    </div>
+
+
+</body>
+</html>

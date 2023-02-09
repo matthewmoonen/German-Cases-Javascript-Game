@@ -1,0 +1,55 @@
+body {
+    background-color: #2d2d2d;
+    color: white;
+}
+
+#player-progress li {
+    list-style: none;
+}
+#player-progress ul {
+    display: flex;
+    /* justify-content: space-around; */
+    justify-content: space-evenly;
+}
+
+
+#game, #result-section {
+    width: 50%;
+    background-color: grey;
+    margin: auto;
+    margin-top: 20px;
+    padding: 3%;
+    border-radius: 10px;
+    border: 2px solid;
+}
+
+
+
+#result-section {
+    animation: fadeIn .35s;
+}
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+
+#lives {
+    text-align: right;
+}
+
+#result-section {
+    display: none;
+}
+
+#lesson-title {
+    margin-top: 0;
+}
+
+#game-over {
+    display: none;
+}
+
+#next-question {
+    display: none;
+}
