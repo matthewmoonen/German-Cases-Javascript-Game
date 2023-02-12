@@ -56,7 +56,9 @@ function handleResult(isCorrect) {
         document.getElementById("result-section").style.backgroundColor = "#8b2222"
         lives -= 1;
         if (lives == 0)  {
-            gameOver(false)
+            gameOver(false) 
+        } else if (currentQuestionNumber == questionCount) {
+            gameOver(true)
         }
         document.getElementById("lives").innerHTML = lives;
     }
@@ -88,6 +90,7 @@ function gameOver(endResult) {
         document.getElementById("game").style.backgroundColor = "#228b22"
     } else {
         document.getElementById("game-over-msg").innerHTML = "Unfortunately, you ran out of lives. Better luck next time!";
+        document.getElementById("game").style.backgroundColor = "#8b2222";
     }
 
 }
