@@ -7,6 +7,12 @@
     <link rel="stylesheet" href="styles.css" rel="stylesheet">
     <script defer src="script.js"></script>
 
+    <!-- Font links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet"> 
+    
+
     <title>My Quiz</title>
 </head>
 <body>
@@ -42,10 +48,8 @@
 
         <div id="game-over">
             <h1 id="game-over-heading">Game Over</h1>
-            <p class="game-over-won" id="game-over-won">Wow! Du bist großartig!</p>
-            <p class="game-over-lost" id="game-over-lost">Unfortunately, you ran out of lives. Better luck next time!</p>
-            <button class="game-again-lost" id="btn-game-lost" onClick="window.location.reload();">Play Again</button>
-            <button class="game-over-won" id="btn-game-won" onClick="window.location.reload();">Try Again</button>
+            <p class="game-over-msg" id="game-over-msg"></p>
+            <button class="btn-play-again" id="btn-play-again" onClick="window.location.reload();">Play Again</button>
             <!-- TODO: FIX -->
             <button onclick="window.location.href='/code';">Go Back</button>
         </div>

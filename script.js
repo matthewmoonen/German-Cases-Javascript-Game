@@ -83,10 +83,11 @@ function gameOver(endResult) {
     document.getElementById("next-question").style.display = "none";
     
     if (endResult == true) {
-        document.getElementById("game-over-lost").style.display = "none";
-        
+        document.getElementById("game-over-heading").innerHTML = "Game Over ✨";
+        document.getElementById("game-over-msg").innerHTML = "Wow! Du bist großartig!";
+        document.getElementById("game").style.backgroundColor = "#228b22"
     } else {
-        document.getElementById("game-over-won").style.display = "none";
+        document.getElementById("game-over-msg").innerHTML = "Unfortunately, you ran out of lives. Better luck next time!";
     }
 
 }
