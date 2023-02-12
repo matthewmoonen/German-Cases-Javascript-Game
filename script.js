@@ -1,4 +1,3 @@
-
 // Variables to be updated dynamically in future update that includes multiple lessons.
 const lessonTitle = "Masculine Nominative and Accusitive"
 // const totalQuestions = ""
@@ -6,15 +5,9 @@ const lessonTitle = "Masculine Nominative and Accusitive"
 const questionCount = 10
 let correctAnswer = 1
 
-
 // Variables that will be updated by the above.
 document.getElementById("lesson-title").innerHTML = lessonTitle;
 document.getElementById("question-total-number").innerHTML = questionCount;
-
-
-
-
-
 
 let idOfCorrectAnswer = "btn6"
 let scoreCounter = 0
@@ -22,8 +15,6 @@ let lives = 5
 
 document.getElementById("lives").innerHTML = lives;
 let currentQuestionNumber = 1
-
-
 
 function checkAnswer(theId) {
     if (theId == idOfCorrectAnswer) {
@@ -91,6 +82,6 @@ function gameOver(endResult) {
     } else {
         document.getElementById("game-over-msg").innerHTML = "Unfortunately, you ran out of lives. Better luck next time!";
         document.getElementById("game").style.backgroundColor = "#8b2222";
+        document.getElementById('btn-play-again').innerText = 'Try Again';
     }
-
 }
