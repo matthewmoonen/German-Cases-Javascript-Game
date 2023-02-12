@@ -3,6 +3,10 @@
     font-family: Open Sans;
 }
 
+#go-back-btn {
+    display: none;
+}
+
 body {
     background-color: #2d2d2d;
     color: white;
@@ -44,6 +48,25 @@ body {
     animation: fadeIn .35s;
     display: none;
 }
+
+#your-lives {
+    /* color: #3d8c40; */
+    /* color: #8bc34a; */
+    /* color: #87CEEB; */
+    /* color: #2196F3; */
+    /* color: #00bcd4; */
+    /* color: #f1f1f1; */
+    /* color: #616161; */
+    /* color: #f44336; */
+    /* color: #3d8c40; */
+    /* color: #0a6ab6; */
+    /* color: #202324; */
+    /* color: #181a1b; */
+    /* color: #047a4e; */
+    color: #a91409;
+
+}
+
 @keyframes fadeIn {
     0% { opacity: 0; }
     100% { opacity: 1; }
