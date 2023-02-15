@@ -11,18 +11,43 @@ body {
     margin: 0;
 }
 
+ /* {
+    width: 50%;
+    background-color: grey;
+    margin: auto;
+    margin-top: 20px;
+    padding: 3%;
+    border-radius: 10px;
+    
+    border: 2px solid;
+} */
+
+
+.disabled {
+    pointer-events: none;
+}
+
 .player-progress {
-    padding-top: 50px;
-    font-size: 1.45rem;    
+    margin-top: 50px;
+    /* padding-top: 50px; */
+    font-size: 1.45rem;
+    /* background-color: #9d63b0; */
+    /* background-color: hsl(250, 100%, 83%, 50%); */
+    /* background-color: hsl(285, 100%, 36%, 20%); */
+    background-color: hsl(315, 100%, 36%, 20%);
+    border-radius: 20px;
+    /* width: 95%; */
+    margin-left: 3%;
+    margin-right: 3%;
 }
 #back {
     position: fixed;
     right: 7%;
 }
 #your-lives {
-    position: fixed;
+    /* position: fixed;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%); */
     color: #a91409;
 }
 #information {
@@ -106,7 +131,7 @@ body {
 }
 
 .answer-btn {
-    background-color: #008CBA; /* blue */
+    background-color: #008CBA; /* Note: if you change this, you also need to do so in the JS file, nextQuestion function */
     /* border: none; */
     color: white;
     width: 95%;

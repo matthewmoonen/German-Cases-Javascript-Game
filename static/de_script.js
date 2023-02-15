@@ -18,31 +18,41 @@ let idOfCorrectAnswer = "btn1"
 let pointCounter = 0
 let lives = 5
 
+let currentQuestion = "What is the air speed velocity of an unladen swallow"
 
 
 document.getElementById("lives").innerHTML = lives;
 let currentQuestionNumber = 1
 
 function checkAnswer(theId) {
+    
     if (theId == idOfCorrectAnswer) {
-        handleResult(true)
+        
+        handleResult(true, theId)
+
     } else {
-        handleResult(false)
+        handleResult(false, theId)
     }
+    
 }
 
-function handleResult(isCorrect) {
+function handleResult(isCorrect, chosenId) {
+    
     document.getElementById("result-section").style.display = "block";
 
     // TODO: make buttons non-clickable after answer has been chosen
 
     // document.getElementById("answer-section").style.display = "none";
-    document.getElementById("next-question").style.display = "block";
     
+    
+
+    document.getElementById("next-question").style.display = "block";
+
 
     if (isCorrect == true) {
         document.getElementById("result-heading").innerHTML = "Genau! 😊";
         document.getElementById("result-body").innerHTML = "Sehr gut gemacht!";
+        document.getElementById(idOfCorrectAnswer).style.backgroundColor = "#228b22";
         pointCounter += posPointAggregate;
         if (pointCounter >= pointsToWin) {
             gameOver(true)
@@ -54,6 +64,8 @@ function handleResult(isCorrect) {
         document.getElementById("result-heading").innerHTML = "Nein 🙁";
         document.getElementById("result-body").innerHTML = "Deine Antwort ist leider falsch.";
         document.getElementById("result-section").style.backgroundColor = "#8b2222";
+        document.getElementById(chosenId).style.backgroundColor = "#8b2222";
+        document.getElementById(idOfCorrectAnswer).style.backgroundColor = "#228b22";
         lives -= 1;
         if (lives == 0)  {
             gameOver(false);
@@ -68,13 +80,23 @@ function handleResult(isCorrect) {
         document.getElementById("lives").innerHTML = lives;
     }
     document.getElementById("score").innerHTML = pointCounter;
+    
 }
 
 
 function nextQuestion() {
+    
     document.getElementById("answer-section").style.display = "block";
     document.getElementById("result-section").style.display = "none";
     document.getElementById("next-question").style.display = "none";
+    document.getElementById("btn1").style.backgroundColor = "#008CBA";
+    document.getElementById("btn2").style.backgroundColor = "#008CBA";
+    document.getElementById("btn3").style.backgroundColor = "#008CBA";
+    document.getElementById("btn4").style.backgroundColor = "#008CBA";
+    document.getElementById("btn5").style.backgroundColor = "#008CBA";
+    document.getElementById("btn6").style.backgroundColor = "#008CBA";
+    document.getElementById("btn7").style.backgroundColor = "#008CBA";
+    document.getElementById("btn8").style.backgroundColor = "#008CBA";
     currentQuestionNumber += 1;
 }
 
