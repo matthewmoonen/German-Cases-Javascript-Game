@@ -80,9 +80,30 @@ function handleResult(isCorrect, chosenId) {
         document.getElementById("lives").innerHTML = lives;
     }
     document.getElementById("score").innerHTML = pointCounter;
-    
+    disableButtons()
 }
 
+function disableButtons() {
+    document.getElementById("btn1").disabled = true;
+    document.getElementById("btn2").disabled = true;
+    document.getElementById("btn3").disabled = true;
+    document.getElementById("btn4").disabled = true;
+    document.getElementById("btn5").disabled = true;
+    document.getElementById("btn6").disabled = true;
+    document.getElementById("btn7").disabled = true;
+    document.getElementById("btn8").disabled = true;
+}
+
+function enableButtons() {
+    document.getElementById("btn1").disabled = false;
+    document.getElementById("btn2").disabled = false;
+    document.getElementById("btn3").disabled = false;
+    document.getElementById("btn4").disabled = false;
+    document.getElementById("btn5").disabled = false;
+    document.getElementById("btn6").disabled = false;
+    document.getElementById("btn7").disabled = false;
+    document.getElementById("btn8").disabled = false;
+}
 
 function nextQuestion() {
     
@@ -98,6 +119,7 @@ function nextQuestion() {
     document.getElementById("btn7").style.backgroundColor = "#008CBA";
     document.getElementById("btn8").style.backgroundColor = "#008CBA";
     currentQuestionNumber += 1;
+    enableButtons()
 }
 
 function gameOver(endResult) {
