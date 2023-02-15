@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="/static/de_styles.css" rel="stylesheet">
+    <script defer src="/static/de_script.js"></script>
+
+    <!-- Font links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet"> 
+    
+
+    <title>My Quiz</title>
+</head>
+<body>
+    <div id="game">
+        <nav class="navigate-and-info">
+            <div id="back">
+                <svg class="exit" id="exit" xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
+              </svg>
+            </div>
+            <div id="information">
+                <svg id="lesson-info" xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
+                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+              </svg>
+            </div>
+        </nav>
+        <div class="player-progress">
+            
+            <div id="your-lives">❤ <label for="" id="lives">0</label> </div>
+
+            <!-- <div id="your-score"><label for="" id="score">0</label>%</div> -->
+        </div>
+    <h1 id="lesson-title">Lesson Title</h1>
+
+        <div id="instructions">Answer this:</div>
+
+        <div id="question"><p>What is the answer to life, the universe and everything?</p></div>
+
+        <div id="answer-section">
+            <button onclick="checkAnswer(this.id)" class="answer-btn" id="btn1">Forty-Two</button>
+            <button onclick="checkAnswer(this.id)" class="answer-btn" id="btn2">Answer 2</button>
+            <button onclick="checkAnswer(this.id)" class="answer-btn" id="btn3">Answer 3</button>
+            <button onclick="checkAnswer(this.id)" class="answer-btn" id="btn4">Answer 4</button>
+            <button onclick="checkAnswer(this.id)" class="answer-btn" id="btn5">Answer 5</button>
+            <button onclick="checkAnswer(this.id)" class="answer-btn" id="btn6">Answer 6</button>
+            <button onclick="checkAnswer(this.id)" class="answer-btn" id="btn7">Answer 7</button>
+            <button onclick="checkAnswer(this.id)" class="answer-btn" id="btn8">Answer 8</button>
+        </div>
+            <button onclick="nextQuestion()" id="next-question" class="btnNav">Next</button>
+        
+
+        <div id="game-over">
+            <h1 id="game-over-heading">Game Over</h1>
+            <p class="game-over-msg" id="game-over-msg"></p>
+            <button class="btn-play-again" id="btn-play-again" onClick="window.location.reload();">Play Again</button>
+            <!-- TODO: FIX -->
+            <button id="go-back-btn" onclick="window.location.href='/code';">Go Back</button>
+        </div>
+
+
+    </div>
+    <div id="result-section">
+        <h1 id="result-heading">Correct or not?</h1>
+        <p id="result-body">You will be told here</p>
+    </div>
+
+
+</body>
+</html>

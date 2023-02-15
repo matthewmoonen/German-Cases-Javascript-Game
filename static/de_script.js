@@ -33,7 +33,10 @@ function checkAnswer(theId) {
 
 function handleResult(isCorrect) {
     document.getElementById("result-section").style.display = "block";
-    document.getElementById("answer-section").style.display = "none";
+
+    // TODO: make buttons non-clickable after answer has been chosen
+
+    // document.getElementById("answer-section").style.display = "none";
     document.getElementById("next-question").style.display = "block";
     
 

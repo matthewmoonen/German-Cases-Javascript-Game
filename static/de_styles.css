@@ -1,0 +1,199 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: Open Sans;
+}
+
+body {
+    background-color: #008CBA;
+    color: white;
+    padding: 0;
+    padding-top: 20px;
+    margin: 0;
+}
+
+.player-progress {
+    padding-top: 50px;
+    font-size: 1.45rem;    
+}
+#back {
+    position: fixed;
+    right: 7%;
+}
+#your-lives {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #a91409;
+}
+#information {
+    position: fixed;
+    left: 7%;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+#result-heading {
+    margin: 0;
+}
+#result-body {
+    margin: 3px;
+}
+
+#lesson-title {
+    display: none;
+    /* padding-top: 80px; */
+}
+
+
+
+#game, #result-section {
+    width: 100vw;
+    background-color: #008CBA;
+    margin: 0;
+    padding: 2%;
+    border-radius: 10px;    
+}
+
+#game {
+    min-height: 500px;
+    height: 60vh;
+}
+
+#instructions {
+    margin-top: 30px;
+    margin-bottom: 0;
+    font-size: 16px;
+    font-style: italic;
+}
+#question {
+    margin-top: 3px;
+}
+
+/* #player-progress ul {
+    display: block;
+} */
+
+#lesson-title {
+    font-size: 1rem;
+    color: #222222;
+}
+
+#game {
+    min-height: 400px;
+}
+
+#player-progress {
+    font-size: 0.8rem;
+}
+
+#lesson-title {
+    margin-top: 0;
+}
+
+#result-section {
+    animation: fadeIn .35s;
+    display: none;
+}
+
+#game-over {
+    display: none;
+}
+
+#next-question {
+    display: none;
+}
+
+.answer-btn {
+    background-color: #008CBA; /* blue */
+    /* border: none; */
+    color: white;
+    width: 95%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 9px;
+    border: 3px solid;
+    padding: 10px;
+  }
+.answer-btn:hover {
+    background-color: #0082ad;
+}
+.answer-btn:active {
+    background-color: #70dbff;
+    border-color: #70dbff;
+}
+
+    /* color: #3d8c40; */
+    /* color: #8bc34a; */
+    /* color: #87CEEB; */
+    /* color: #2196F3; */
+    /* color: #00bcd4; */
+    /* color: #f1f1f1; */
+    /* color: #616161; */
+    /* color: #f44336; */
+    /* color: #3d8c40; */
+    /* color: #0a6ab6; */
+    /* color: #202324; */
+    /* color: #181a1b; */
+    /* color: #047a4e; */
+
+
+#go-back-btn {
+    display: none;
+}
+
+#exit:hover, #lesson-info:hover {
+    opacity: 0.6;
+}
+
+@media (min-width: 768px) {
+ 
+
+
+
+
+/* TODO: fix */
+    #game, #result-section {
+        width: 50%;
+        background-color: grey;
+        margin: auto;
+        margin-top: 20px;
+        padding: 3%;
+        border-radius: 10px;
+        
+        border: 2px solid;
+    }
+
+
+
+
+
+
+
+
+
+
+    #lesson-title {
+        font-size: 1.5rem;
+    }
+    
+    /* #player-progress ul {
+        display: flex; */
+        /* justify-content: space-around; */
+        /* justify-content: space-evenly;
+    } */
+    
+    /* #your-score, #your-lives, #question-number {
+    } */
+    
+    /* .answer-btn {
+        margin: 5px;
+    } */
+}
