@@ -17,7 +17,7 @@
 </head>
 <body>
     <div id="game">
-        <nav class="navigate-and-info">
+        <nav class="top-sections" id="navigate-and-info">
             <div id="back">
                 <svg class="exit" id="exit" xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
                 <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
@@ -30,16 +30,31 @@
               </svg>
             </div>
         </nav>
-        <div class="player-progress">
-            <div id="your-lives">❤ <label for="" id="lives">0</label> </div>
+        <div class="top-sections" id="player-progress">
+            <div id="title-of-lesson"><h1 id="lesson-title">Lesson Title</h1></div>
 
-            <div id="your-score"><label for="" id="score">0</label>%</div>
+            <div id="lives-and-score">
+                <ul class="lives-score">
+                    <li></li>
+                    <li id="your-score"><label for="" id="score">0</label>%</li>
+                    <li></li>
+                    <li></li>
+                    <li id="your-lives">❤ <label for="" id="lives">0</li>
+                    <li></li>
+                </ul>
+
+            <!-- <div id="lives-and-score">
+                <div id="your-lives">❤ <label for="" id="lives">0</label> </div>
+
+                <div id="your-score"><label for="" id="score">0</label>%</div>
+            </div> -->
+            </div>
         </div>
-    <h1 id="lesson-title">Lesson Title</h1>
 
-        <div id="instructions">Answer this:</div>
-
-        <div id="question"><p>What is the answer to life, the universe and everything?</p></div>
+        <div id="instructions-question">
+            <div id="instructions">Answer this:</div>
+            <div id="question"><p>What is the answer to life, the universe and everything?</p></div>
+        </div>
 
         <div id="answer-section">
             <button onclick="checkAnswer(this.id)" class="answer-btn" id="btn1">Forty-Two</button>

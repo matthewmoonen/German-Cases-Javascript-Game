@@ -23,11 +23,10 @@ body {
 } */
 
 
-.disabled {
-    pointer-events: none;
-}
 
-.player-progress {
+
+#player-progress {
+    /* position: fixed; */
     margin-top: 50px;
     /* padding-top: 50px; */
     font-size: 1.45rem;
@@ -39,11 +38,26 @@ body {
     /* width: 95%; */
     margin-left: 3%;
     margin-right: 3%;
+    padding-top: 10px;
 }
 #back {
     position: fixed;
     right: 7%;
 }
+
+#instructions-question {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+ul.lives-score {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 10px;
+}
+
 #your-lives {
     /* position: fixed;
     left: 50%;
@@ -66,12 +80,20 @@ body {
     margin: 3px;
 }
 
+#live-and-score {
+    /* position: relative; */
+    display: flex;
+    justify-content: space-evenly;
+}
+
 #lesson-title {
-    display: none;
+    /* display: none; */
     /* padding-top: 80px; */
 }
 
-
+#title-of-lesson {
+    text-align: center;
+}
 
 #game, #result-section {
     width: 100vw;
@@ -87,18 +109,17 @@ body {
 }
 
 #instructions {
-    margin-top: 30px;
+    /* margin-top: 30px; */
     margin-bottom: 0;
-    font-size: 16px;
+    font-size: 0.85rem;
     font-style: italic;
 }
 #question {
-    margin-top: 3px;
+    margin-top: 0;
+    padding-top: 0;
 }
 
-/* #player-progress ul {
-    display: block;
-} */
+
 
 #lesson-title {
     font-size: 1rem;
@@ -109,15 +130,17 @@ body {
     min-height: 400px;
 }
 
-#player-progress {
-    font-size: 0.8rem;
-}
+
 
 #lesson-title {
     margin-top: 0;
 }
 
 #result-section {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background-color: red;
     animation: fadeIn .35s;
     display: none;
 }
@@ -209,16 +232,5 @@ body {
         font-size: 1.5rem;
     }
     
-    /* #player-progress ul {
-        display: flex; */
-        /* justify-content: space-around; */
-        /* justify-content: space-evenly;
-    } */
-    
-    /* #your-score, #your-lives, #question-number {
-    } */
-    
-    /* .answer-btn {
-        margin: 5px;
-    } */
+
 }
