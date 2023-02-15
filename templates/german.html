@@ -42,12 +42,6 @@
                     <li id="your-lives">❤ <label for="" id="lives">0</li>
                     <li></li>
                 </ul>
-
-            <!-- <div id="lives-and-score">
-                <div id="your-lives">❤ <label for="" id="lives">0</label> </div>
-
-                <div id="your-score"><label for="" id="score">0</label>%</div>
-            </div> -->
             </div>
         </div>
 
@@ -66,12 +60,9 @@
             <button onclick="checkAnswer(this.id)" class="answer-btn" id="btn7">Answer 7</button>
             <button onclick="checkAnswer(this.id)" class="answer-btn" id="btn8">Answer 8</button>
         </div>
-        <div class="go-to-next-question" id="go-to-next-question">
-            <button onclick="nextQuestion()" id="next-question" class="btnNav">Next</button>
-        </div>
-            
         
-
+        
+        
         <div id="game-over">
             <h1 id="game-over-heading">Game Over</h1>
             <p class="game-over-msg" id="game-over-msg"></p>
@@ -79,14 +70,19 @@
             <!-- TODO: FIX -->
             <button id="go-back-btn" onclick="window.location.href='/code';">Go Back</button>
         </div>
-
-
+        
+        
     </div>
     <div id="result-section">
-        <h1 id="result-heading">Correct or not?</h1>
-        <p id="result-body">You will be told here</p>
+        <div id="result-writing">
+            <h1 id="result-heading">Correct or not?</h1>
+            <p id="result-body">You will be told here</p>
+        </div>
+        <div class="go-to-next-question" id="go-to-next-question">
+            <button onclick="nextQuestion()" id="next-question" class="btnNav">Next</button>
+        </div>
     </div>
-
+    
 
 </body>
 </html>

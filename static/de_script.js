@@ -38,7 +38,7 @@ function checkAnswer(theId) {
 
 function handleResult(isCorrect, chosenId) {
     
-    document.getElementById("result-section").style.display = "block";
+    document.getElementById("result-section").style.display = "flex";
 
     // TODO: make buttons non-clickable after answer has been chosen
 
@@ -46,7 +46,7 @@ function handleResult(isCorrect, chosenId) {
     
     
 
-    document.getElementById("next-question").style.display = "block";
+    document.getElementById("next-question").style.display = "flex";
 
 
     if (isCorrect == true) {
@@ -64,6 +64,7 @@ function handleResult(isCorrect, chosenId) {
         document.getElementById("result-heading").innerHTML = "Nein 🙁";
         document.getElementById("result-body").innerHTML = "Deine Antwort ist leider falsch.";
         document.getElementById("result-section").style.backgroundColor = "#8b2222";
+        // document.getElementById("go-to-next-question").style.backgroundColor = "#8b2222";
         document.getElementById(chosenId).style.backgroundColor = "#8b2222";
         document.getElementById(idOfCorrectAnswer).style.backgroundColor = "#228b22";
         lives -= 1;
