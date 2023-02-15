@@ -103,10 +103,10 @@ ul.lives-score {
     border-radius: 10px;    
 }
 
-#game {
+/* #game {
     min-height: 500px;
     height: 60vh;
-}
+} */
 
 #instructions {
     /* margin-top: 30px; */
@@ -126,9 +126,9 @@ ul.lives-score {
     color: #222222;
 }
 
-#game {
+/* #game {
     min-height: 400px;
-}
+} */
 
 
 
@@ -157,6 +157,9 @@ ul.lives-score {
 }
 #go-to-next-question {
     width: 30%;
+    vertical-align: middle;
+    display: flex;
+    justify-content: right;
 }
 
 
@@ -177,21 +180,21 @@ ul.lives-score {
 
 #next-question {
     /* float: right; */
+    width: 100%;
     margin-top: 20px;
+    margin-bottom: 20px;
     margin-right: 20px;
     /* margin: auto; */
     display: none;
     color: pink;
     /* padding: 16px 0 16px 0; */
-    width: 90%;
+    /* width: 90%; */
     background-color: transparent;
-    text-align: center; 
-    /* text-decoration: none; */
-    /* display: inline-block; */
+
     font-size: 16px;
     border-radius: 9px;
     border: 3px solid;
-    padding: 10px 0 10px 30%;
+    padding: 10px 30% 10px 30%;
 
 }
 
