@@ -24,12 +24,16 @@ let currentQuestion = "What is the air speed velocity of an unladen swallow"
 document.getElementById("lives").innerHTML = lives;
 let currentQuestionNumber = 1
 
+
+
+let questionArray = [["this is a question", "the answer", "the answer", "option 2", "option 3"]]
+
+
+
 function checkAnswer(theId) {
     
     if (theId == idOfCorrectAnswer) {
-        
         handleResult(true, theId)
-
     } else {
         handleResult(false, theId)
     }
@@ -93,6 +97,26 @@ function disableButtons() {
     document.getElementById("btn6").disabled = true;
     document.getElementById("btn7").disabled = true;
     document.getElementById("btn8").disabled = true;
+
+    document.getElementById("btn1").style.color = "hsl(0, 0%, 100%, 70%)";
+    document.getElementById("btn2").style.color = "hsl(0, 0%, 100%, 70%)";
+    document.getElementById("btn3").style.color = "hsl(0, 0%, 100%, 70%)";
+    document.getElementById("btn4").style.color = "hsl(0, 0%, 100%, 70%)";
+    document.getElementById("btn5").style.color = "hsl(0, 0%, 100%, 70%)";
+    document.getElementById("btn6").style.color = "hsl(0, 0%, 100%, 70%)";
+    document.getElementById("btn7").style.color = "hsl(0, 0%, 100%, 70%)";
+    document.getElementById("btn8").style.color = "hsl(0, 0%, 100%, 70%)";
+
+
+    // document.getElementById("btn1").
+    // document.getElementById("btn2").
+    // document.getElementById("btn3").
+    // document.getElementById("btn4").
+    // document.getElementById("btn5").
+    // document.getElementById("btn6").
+    // document.getElementById("btn7").
+    // document.getElementById("btn8").
+
 }
 
 function enableButtons() {
@@ -104,6 +128,14 @@ function enableButtons() {
     document.getElementById("btn6").disabled = false;
     document.getElementById("btn7").disabled = false;
     document.getElementById("btn8").disabled = false;
+    document.getElementById("btn1").style.color = "hsl(0, 0%, 100%, 100%)";
+    document.getElementById("btn2").style.color = "hsl(0, 0%, 100%, 100%)";
+    document.getElementById("btn3").style.color = "hsl(0, 0%, 100%, 100%)";
+    document.getElementById("btn4").style.color = "hsl(0, 0%, 100%, 100%)";
+    document.getElementById("btn5").style.color = "hsl(0, 0%, 100%, 100%)";
+    document.getElementById("btn6").style.color = "hsl(0, 0%, 100%, 100%)";
+    document.getElementById("btn7").style.color = "hsl(0, 0%, 100%, 100%)";
+    document.getElementById("btn8").style.color = "hsl(0, 0%, 100%, 100%)";
 }
 
 function nextQuestion() {
