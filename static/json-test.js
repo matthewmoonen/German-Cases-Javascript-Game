@@ -1,6 +1,10 @@
 let currentQuestionNumber = 0;
+// Declare questions as global variable
 let questions;
 
+let correctMultiChoiceAnswer;
+
+// Request lesson questions and answers as JSON
 async function fetchQuestionsJSON() {
     const response = await fetch('/lesson');
     const lesson = await response.json();
@@ -11,26 +15,51 @@ fetchQuestionsJSON().then(lesson => {
     questions = lesson;
 });
 
-const questionButtonClicked = document.getElementById("show-question")
-questionButtonClicked.addEventListener("click", () => { showQuestion(), false })
 
-const answerButtonClicked = document.getElementById("show-answer")
-answerButtonClicked.addEventListener("click", () => { showAnswer(), false })
+
+function begin() {
+    document.getElementById("begin").style.display = "none";
+    showQuestion()
+}
 
 function showQuestion() {
+
+    document.getElementById("show-next-question").style.display = "none";
+    document.getElementById("correct-answer").style.display = "none";
+    document.getElementById("incorrect-answer").style.display = "none";
     if (currentQuestionNumber == questions.length - 1) {
-        currentQuestionNumber = 1
+        currentQuestionNumber = 1;
     } else {
         currentQuestionNumber += 1;
     }
     document.getElementById("the-question").innerHTML = questions[currentQuestionNumber]["question"];
-    document.getElementById("the-answer").innerHTML = "";
+    
+    let questionOptions = questions[currentQuestionNumber]["options"];
+    for (let i = 0; i < questionOptions.length; i++) {
+        const buttonID = i;
+        const button = document.getElementById(buttonID);
+        button.style.color = "black";
+        button.innerText = questionOptions[i][0];
+        button.style.display = "block";
+        if (questionOptions[i][1] == true) {
+            correctMultiChoiceAnswer = buttonID
+        }
+    }
+    for (let i = questionOptions.length; i <= 9; i++) {
+        let buttonID = i;
+        document.getElementById(buttonID).style.display = "none";
+    }
 
 }
 
-function showAnswer() {
-    document.getElementById("the-answer").innerHTML = questions[currentQuestionNumber]["options"];
+function checkAnswer(chosenAnswer) {
+    document.getElementById("show-next-question").style.display = "block";
+    document.getElementById(correctMultiChoiceAnswer).style.color = "green";
+    if (chosenAnswer == correctMultiChoiceAnswer) {
+        document.getElementById("correct-answer").style.display = "block";
+    } else {
+        document.getElementById("incorrect-answer").style.display = "block";
+        document.getElementById(chosenAnswer).style.color = "red";
+    }
 }
-
-
 

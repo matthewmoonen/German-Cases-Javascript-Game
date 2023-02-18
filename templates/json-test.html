@@ -12,10 +12,24 @@
     <title>Document</title>
 </head>
 <body>
-<button id="show-question">Show Question</button>
-<p id="the-question"></p>
-<button id="show-answer">Show Answer</button>
-<p id="the-answer"></p>
 
+<button onclick="begin()" id="begin">Begin</button>
+
+<div id="the-question"></div>
+<div id="mult-choice-btns">
+    <button onclick="checkAnswer(this.id)" id="0" class="multi-choice-btn"></button>
+    <button onclick="checkAnswer(this.id)" id="1" class="multi-choice-btn"></button>
+    <button onclick="checkAnswer(this.id)" id="2" class="multi-choice-btn"></button>
+    <button onclick="checkAnswer(this.id)" id="3" class="multi-choice-btn"></button>
+    <button onclick="checkAnswer(this.id)" id="4" class="multi-choice-btn"></button>
+    <button onclick="checkAnswer(this.id)" id="5" class="multi-choice-btn"></button>
+    <button onclick="checkAnswer(this.id)" id="6" class="multi-choice-btn"></button>
+    <button onclick="checkAnswer(this.id)" id="7" class="multi-choice-btn"></button>
+    <button onclick="checkAnswer(this.id)" id="8" class="multi-choice-btn"></button>
+    <button onclick="checkAnswer(this.id)" id="9" class="multi-choice-btn"></button>
+</div>
+<div id="correct-answer">That's right!</div>
+<div id="incorrect-answer">Sorry, that's wrong.</div>
+<button onclick="showQuestion()" id="show-next-question">Show Next Question</button>
 </body>
 </html>
