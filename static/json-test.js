@@ -18,7 +18,7 @@ const answerButtonClicked = document.getElementById("show-answer")
 answerButtonClicked.addEventListener("click", () => { showAnswer(), false })
 
 function showQuestion() {
-    if (currentQuestionNumber == questions.length - 2) {
+    if (currentQuestionNumber == questions.length - 1) {
         currentQuestionNumber = 1
     } else {
         currentQuestionNumber += 1;
@@ -29,7 +29,7 @@ function showQuestion() {
 }
 
 function showAnswer() {
-    document.getElementById("the-answer").innerHTML = questions[currentQuestionNumber]["answer"];
+    document.getElementById("the-answer").innerHTML = questions[currentQuestionNumber]["options"];
 }
 
 

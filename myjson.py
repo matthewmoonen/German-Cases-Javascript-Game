@@ -4,63 +4,47 @@ def main():
 
 def lesson_json():
 
-    return [{
+    return [
+        {
         "lessonType": "silly questions",
         "difficulty": "depends on a number of factors",
         "funniness": "somewhat",
-        "numberOfQuestions": 2
         },
         {
-        "questionNumber": 1,
+        "questionID": "AA01",
         "question": "What is your name?",
-        "type": "multi-choice",
-        "answer": "Matthew",
-        "option1": "a wrong answer",
-        "option2": "Matthew",
-        "option3": "another wrong answer"
+        "options": [["Bart", False], ["Matthew", True], ["Lisa", False]],
+        "type": "multiChoice",
         },
         {
-        "questionNumber": 2,
+        "questionID": "AA02",
         "question": "What is your favourite colour?",
-        "type": "multi-choice",
-        "answer": "I don't know",
-        "option1": "a wrong answer",
-        "option2": "I don't know",
-        "option3": "another wrong answer"
+        "options": [["Pink", True], ["#e1ad01", False], ["Pantone 448 C", False]],
+        "type": "multiChoice",
         },
         {
-        "questionNumber": 3,
+        "questionID": "AA03",
         "question": "Why did the chicken cross the road?",
-        "type": "multi-choice",
-        "answer": "To bock traffic",
-        "option1": "a wrong answer",
-        "option2": "To bock traffic",
-        "option3": "another wrong answer"
+        "options": [["To bock traffic", True], ["I don't know", False]],
+        "type": "multiChoice",
         },
         {
-        "questionNumber": 4,
+        "questionID": "AA04",
         "question": "What is the air speed velocity of an unladen swallow?",
-        "type": "multi-choice",
-        "answer": "What do you mean? African or European swallow?",
-        "option1": "99",
-        "option2": "What do you mean? African or European swallow?",
-        "option3": "infinity"},
-        
-        {
-        "questionNumber": 5,
-        "question": "What is the answer to life, the universe and everything?",
-        "type": "multi-choice",
-        "answer": "42",
-        "option1": "666",
-        "option2": "42"
+        "options": [["99", False], ["What do you mean? African or European swallow?", True], ["Infinity", False]],
+        "type": "multiChoice",
         },
         {
-        "questionNumber": 6,
+        "questionID": "AA05",
+        "question": "What is the answer to life, the universe and everything?",
+        "options": [["666", False], ["Forty-two", True]],
+        "type": "multiChoice",
+        },
+        {
+        "questionID": "AA06",
         "question": "What animal can jump higher than a house?",
-        "type": "multi-choice",
-        "answer": "Many - houses can't jump",
-        "option1": "a wrong answer",
-        "option2": "Many - houses can't jump",
+        "options": [["Many - houses can't jump", True], ["Only a kangaroo", False]],
+        "type": "multiChoice",
         },
         ]
     
