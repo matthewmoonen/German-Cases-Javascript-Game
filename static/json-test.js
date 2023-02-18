@@ -9,7 +9,6 @@ Declare globally used variables:
 var lives;
 var posPointAggregate;
 var negPointAggregate;
-// var currentQuestion
 var currentQuestionNumber = 0;
 const pointsToWin = 100;
 var pointCounter = 0;
@@ -37,22 +36,16 @@ fetchlessonContentJSON().then(lesson => {
     lives = lessonContent[0]["lives"];
 });
 
-
-
-
 // Show start page
 function begin() {
     updateLives()
     updatePoints()
     document.getElementById("begin").style.display = "none";
     document.getElementById("points-and-lives").style.display = "block";
+    document.getElementById("question-and-answer").style.display = "block";
+    document.getElementById("navigate-and-info").style.display = "block";
     showQuestion()
 }
-
-
-// function showInfo() {
-
-// }
 
 // Show each question
 function showQuestion() {
@@ -77,6 +70,7 @@ function showMultiChoice(currentQuestion) {
     for (let i = 0; i < questionOptions.length; i++) {
         const buttonID = "multi-choice-btn" + i;
         const button = document.getElementById(buttonID);
+        button.disabled = false;
         button.style.color = "black"; // TODO: UPDATE
         button.innerText = questionOptions[i][0];
         button.style.display = "block";
@@ -93,6 +87,12 @@ function showMultiChoice(currentQuestion) {
 function checkMultiChoiceAnswer(chosenAnswer) {
     document.getElementById("show-next-question").style.display = "block";
     document.getElementById(correctMultiChoiceAnswer).style.color = "green";
+    
+    for (i = 0; i <= 9; i++) {
+        // const buttonID = "multi-choice-btn" + i;
+        document.getElementById("multi-choice-btn" + i).disabled = true;
+    }
+
     if (chosenAnswer == correctMultiChoiceAnswer) {
         document.getElementById("correct-answer").style.display = "block";
         addOrRemovePoints(true)
@@ -117,7 +117,6 @@ function addOrRemovePoints(aggregate) {
         gameOver(true)
     }
 }
-
 function updatePoints() {
     document.getElementById("your-points").innerHTML = "Your Points: " + pointCounter + "/100"
 }
@@ -138,12 +137,16 @@ function updateLives() {
     document.getElementById("your-lives").innerHTML = "Your lives: " + lives;
 }
 
-
 function gameOver(winOrLose) {
+    document.getElementById("question-and-answer").style.display = "none";
+    document.getElementById("correct-answer").style.display = "none";
+    document.getElementById("incorrect-answer").style.display = "none";
+    document.getElementById("show-result").style.display = "block";
+
     if (winOrLose == true) {
-        console.log("you won!!!")
+        document.getElementById("your-result").innerHTML = "<h1>Game Over</h1><p>You won!!!</p>"
     }
     else {
-        console.log("you lost :(")
+        document.getElementById("your-result").innerHTML = "<h1>Game Over</h1><p>Sorry, you lost :(</p>"
     }
 }
