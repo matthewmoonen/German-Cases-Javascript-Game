@@ -6,9 +6,12 @@ def lesson_json():
 
     return [
         {
-        "lessonType": "silly questions",
+        "lessonTitle": "Silly Questions",
         "difficulty": "depends on a number of factors",
         "funniness": "somewhat",
+        "posPointAggregate": 10,
+        "negPointAggregate": 4,
+        "lives": 5,
         },
         {
         "questionID": "AA01",

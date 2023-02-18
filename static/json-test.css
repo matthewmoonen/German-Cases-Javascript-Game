@@ -2,6 +2,6 @@ body {
     width: 414px;
 }
 
-#correct-answer, #incorrect-answer, #show-next-question, .multi-choice-btn {
+#begin, #correct-answer, #incorrect-answer, #show-next-question, .multi-choice-btn {
     display: none;
 }
