@@ -31,18 +31,28 @@ fetchlessonContentJSON().then(lesson => {
     const lessonTitle = lessonContent[0]["lessonTitle"]
     document.getElementById("lesson-title").innerHTML = lessonTitle
     document.getElementById("page-title").textContent = "Matthew Moonen - " + lessonTitle;
-    posPointAggregate = lessonContent[0]["posPointAggregate"]
-    negPointAggregate = lessonContent[0]["negPointAggregate"]
-    lives = lessonContent[0]["lives"]
+    
+    posPointAggregate = lessonContent[0]["posPointAggregate"];
+    negPointAggregate = lessonContent[0]["negPointAggregate"];
+    lives = lessonContent[0]["lives"];
 });
+
+
 
 
 // Show start page
 function begin() {
+    updateLives()
+    updatePoints()
     document.getElementById("begin").style.display = "none";
+    document.getElementById("points-and-lives").style.display = "block";
     showQuestion()
 }
 
+
+// function showInfo() {
+
+// }
 
 // Show each question
 function showQuestion() {
@@ -63,7 +73,6 @@ function showQuestion() {
 }
 
 function showMultiChoice(currentQuestion) {
-    console.log(currentQuestion)
     let questionOptions = currentQuestion["options"];
     for (let i = 0; i < questionOptions.length; i++) {
         const buttonID = "multi-choice-btn" + i;
@@ -81,20 +90,60 @@ function showMultiChoice(currentQuestion) {
     }
 }
 
-function checkAnswer(chosenAnswer) {
-
+function checkMultiChoiceAnswer(chosenAnswer) {
     document.getElementById("show-next-question").style.display = "block";
     document.getElementById(correctMultiChoiceAnswer).style.color = "green";
     if (chosenAnswer == correctMultiChoiceAnswer) {
         document.getElementById("correct-answer").style.display = "block";
+        addOrRemovePoints(true)
     } else {
         document.getElementById("incorrect-answer").style.display = "block";
         document.getElementById(chosenAnswer).style.color = "red";
+        addOrRemoveLives(false)
+        addOrRemovePoints(false)
     }
 }
 
 function addOrRemovePoints(aggregate) {
-    if (aggregate === false) {
-        
+    if (aggregate === true) {
+        pointCounter += posPointAggregate;
+    } else if (aggregate === false && pointCounter > negPointAggregate) {
+        pointCounter -= negPointAggregate;
+    } else {
+        pointCounter = 0;
+    }
+    updatePoints()
+    if (pointCounter >= pointsToWin) {
+        gameOver(true)
+    }
+}
+
+function updatePoints() {
+    document.getElementById("your-points").innerHTML = "Your Points: " + pointCounter + "/100"
+}
+
+function addOrRemoveLives(addOrRemove) {
+    if (addOrRemove == false) {
+        lives -= 1;
+    }
+    else {
+        lives += 1;
+    }
+    updateLives()
+    if (lives === 0) {
+        gameOver(false)
+    }
+}
+function updateLives() {
+    document.getElementById("your-lives").innerHTML = "Your lives: " + lives;
+}
+
+
+function gameOver(winOrLose) {
+    if (winOrLose == true) {
+        console.log("you won!!!")
+    }
+    else {
+        console.log("you lost :(")
     }
 }

@@ -16,20 +16,26 @@
     
     
     <h1 id="lesson-title"></h1>
-    <button onclick="begin()" id="begin">Begin</button>
+    <button style="display: none;" onclick="begin()" id="begin">Begin</button>
+
+
+    <div id="points-and-lives" style="display: none;">
+        <div id="your-points"></div>
+        <div id="your-lives"></div>
+    </div>
 
 <div id="the-question"></div>
 <div id="mult-choice-btns">
-    <button onclick="checkAnswer(this.id)" id="multi-choice-btn0" class="multi-choice-btn"></button>
-    <button onclick="checkAnswer(this.id)" id="multi-choice-btn1" class="multi-choice-btn"></button>
-    <button onclick="checkAnswer(this.id)" id="multi-choice-btn2" class="multi-choice-btn"></button>
-    <button onclick="checkAnswer(this.id)" id="multi-choice-btn3" class="multi-choice-btn"></button>
-    <button onclick="checkAnswer(this.id)" id="multi-choice-btn4" class="multi-choice-btn"></button>
-    <button onclick="checkAnswer(this.id)" id="multi-choice-btn5" class="multi-choice-btn"></button>
-    <button onclick="checkAnswer(this.id)" id="multi-choice-btn6" class="multi-choice-btn"></button>
-    <button onclick="checkAnswer(this.id)" id="multi-choice-btn7" class="multi-choice-btn"></button>
-    <button onclick="checkAnswer(this.id)" id="multi-choice-btn8" class="multi-choice-btn"></button>
-    <button onclick="checkAnswer(this.id)" id="multi-choice-btn9" class="multi-choice-btn"></button>
+    <button onclick="checkMultiChoiceAnswer(this.id)" id="multi-choice-btn0" class="multi-choice-btn"></button>
+    <button onclick="checkMultiChoiceAnswer(this.id)" id="multi-choice-btn1" class="multi-choice-btn"></button>
+    <button onclick="checkMultiChoiceAnswer(this.id)" id="multi-choice-btn2" class="multi-choice-btn"></button>
+    <button onclick="checkMultiChoiceAnswer(this.id)" id="multi-choice-btn3" class="multi-choice-btn"></button>
+    <button onclick="checkMultiChoiceAnswer(this.id)" id="multi-choice-btn4" class="multi-choice-btn"></button>
+    <button onclick="checkMultiChoiceAnswer(this.id)" id="multi-choice-btn5" class="multi-choice-btn"></button>
+    <button onclick="checkMultiChoiceAnswer(this.id)" id="multi-choice-btn6" class="multi-choice-btn"></button>
+    <button onclick="checkMultiChoiceAnswer(this.id)" id="multi-choice-btn7" class="multi-choice-btn"></button>
+    <button onclick="checkMultiChoiceAnswer(this.id)" id="multi-choice-btn8" class="multi-choice-btn"></button>
+    <button onclick="checkMultiChoiceAnswer(this.id)" id="multi-choice-btn9" class="multi-choice-btn"></button>
 </div>
 <div id="correct-answer">That's right!</div>
 <div id="incorrect-answer">Sorry, that's wrong.</div>
