@@ -14,6 +14,11 @@ const pointsToWin = 100;
 var pointCounter = 0;
 var correctMultiChoiceAnswer;
 
+// Prompt user to confirm they want to leave lesson
+// window.onbeforeunload = function() {
+//     return "Lesson progress will be lost if you leave the page, are you sure?";
+//   };
+
 
 // Declare lesson content as global variable and request as JSON
 let lessonContent;
@@ -59,7 +64,9 @@ function showQuestion() {
     }
     
     const currentQuestion = lessonContent[currentQuestionNumber]
+    document.getElementById("question-instructions").innerHTML = currentQuestion["instructions"]
     document.getElementById("the-question").innerHTML = currentQuestion["question"];
+    document.getElementById("english-translation").innerHTML = currentQuestion["english"]
     if (currentQuestion["type"] === "multiChoice") {
         showMultiChoice(currentQuestion)
     }

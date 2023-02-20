@@ -1,7 +1,21 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+
 body {
+    /* TODO: REMOVE */
     width: 414px;
 }
 
 #show-next-question, .multi-choice-btn {
     display: none;
+}
+
+.question-highlight {
+    color: red;
+    font-size: x-small;
 }
