@@ -2,15 +2,18 @@
     --fw-normal: 400;
     --fw-bold: 700;
 
-    --backgroundcolour: hsl(0, 0%, 12%);
-    --winclr: green;
-    --loseclr: #fc4444;
-    --secondarycolour: hsl(212, 59%, 52%);
+    /* --backgroundcolour: hsl(0, 0%, 12%); */
+    --backgroundcolour: hsl(30, 5%, 9%);
     --lessonbackground: hsl(225, 9%, 17%);
-    --navcolourone: hsl(180, 0%, 100%, 100%);
-    --navcolourtwo: hsl(180, 0%, 100%, 60%);
-    --navcolourthree: hsl(180, 0%, 100%, 80%);
-    --navcolourfour: hsl(180, 0%, 100%, 40%);
+    --wincolour: green;
+    --losecolour: #fc4444;
+    --secondarycolour: hsl(212, 59%, 52%);
+    --secondarycolourfaded: hsl(212, 59%, 52%, 70%);
+    --text100: hsl(180, 0%, 100%, 100%);
+    --text80: hsl(180, 0%, 100%, 80%);
+    --text60: hsl(180, 0%, 100%, 60%);
+    --text40: hsl(180, 0%, 100%, 40%);
+    --text20: hsl(180, 0%, 100%, 20%);
 }
 *, *::before, *::after {
     box-sizing: border-box;
@@ -33,7 +36,7 @@ body {
     height: 100vh;
 }
 .info-and-exit {
-    color: var(--navcolourfour);
+    color: var(--text40);
 }
 #info, #exit {
     margin: 0;
@@ -52,7 +55,7 @@ body {
     font-weight: normal;
     text-transform: uppercase;
     margin-top: 10px;
-    color: var(--navcolourtwo);
+    color: var(--text60);
 }
 
 .player-progress {
@@ -60,19 +63,19 @@ body {
     margin: 8px 12px 12px 12px;
     border-radius: 15px;
 }
-.progress, .health {
+.points, .health {
     /* margin: 15px 0 0 0; */
     padding: 15px 20px;
     width: 50%;
     display: inline-block;
 }
-.progress {
+.points {
     text-align: left;
     color: var(--secondarycolour);
 }
 .health {
     text-align: right;
-    color: var(--loseclr);
+    color: var(--losecolour);
 }
 .card {
     background-color: var(--lessonbackground);
@@ -95,11 +98,17 @@ body {
     font-size: 1.1rem;
     text-align: left;
     margin-bottom: 20px;
+    color: var(--text80);
 }
+.the-question {
+    color: var(--text100);
+}
+
 
 .english-translation {
     font-size: 12px;
     font-style: italic;
+    color: var(--text80);
 }
 
 
@@ -113,15 +122,15 @@ body {
     margin: 10px 0 0 0;
     font-size: 16px;
     background: var(--lessonbackground);
-    color: var(--navcolourtwo);
-    border: var(--navcolourtwo) solid;
+    color: var(--text60);
+    border: var(--text60) solid;
     border-radius: 8px;
 }
 
 
-#multi-choice-btn3, #multi-choice-btn4, #multi-choice-btn5, #multi-choice-btn6, #multi-choice-btn7, #multi-choice-btn8, #multi-choice-btn9 {
+/* #multi-choice-btn3, #multi-choice-btn4, #multi-choice-btn5, #multi-choice-btn6, #multi-choice-btn7, #multi-choice-btn8, #multi-choice-btn9 {
     display: none;
-}
+} */
 
 .user-submit {
     /* height: 40px; */

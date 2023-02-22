@@ -34,17 +34,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">  -->
 
 
-    <title>Matthew Moonen</title>
+    <title id="page-title">Matthew Moonen</title>
 </head>
 <body>
-    <div id="lesson-instructions" style="display: none;">
+    <div id="lesson-instructions">
         <button style="display: none;" onclick="begin()" id="begin">Begin</button>
     </div>
 
 
-    <div id="lesson-content" class="lesson-content">
+    <div style="display: none;" id="lesson-content" class="lesson-content">
         
-        <!-- <div class="info-and-exit" id="info-and-exit" style="display: none;"> -->
+
         <div class="info-and-exit" id="info-and-exit">
             <div id="info" class="info-exit"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
                 <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
@@ -55,39 +55,37 @@
         </div>
 
         <div>
-            <h1 id="lesson-title" class="lesson-title">Masculine Nominative and Accusative</h1>
+            <h1 id="lesson-title" class="lesson-title"></h1>
         </div>
 
 
 
-        <!-- <div id="player-progress" class="player-progress" style="display: none;"> -->
         <div id="player-progress" class="player-progress">
-            <div id="progress" class="progress">Player Progress</div><div id="health" class="health">❤<label for="" id="number-of-hearts"></label></div>
+            <div id="points" class="points">Progress: <label for="" id="player-points"></label></div><div id="health" class="health"><label for="" id="player-health"></label> ❤<label for="" id="number-of-hearts"></label></div>
         </div>
 
-        <!-- <div class="card" id="card" style="display: none;">  -->
+        
         <div class="card" id="card"> 
             <div class="card-content" id="card-content">
                 <div id="question-section" class="question-section">
-                    <!-- <h1 id="lesson-title" class="lesson-title">The Lesson Title</h1> -->
-                    <h2 class="question-instructions" id="question-instructions">Do the thing that the instructions say</h2>
-                    <h2 class="the-question" id="the-question">Hier ist die Frage </h2>
-                    <p id="english-translation" class="english-translation">Here is the English Translation</p>
+                    <h2 class="question-instructions" id="question-instructions"></h2>
+                    <h2 class="the-question" id="the-question"></h2>
+                    <p id="english-translation" class="english-translation"></p>
                 </div>
                 <div id="answer-section" class="answer-section">
                     <div id="multi-choice-btns" class="multi-choice-btns">
-                        <button onclick="checkMultiChoiceAnswer(this.id)" id="multi-choice-btn0" class="multi-choice-btn">One</button>
-                        <button onclick="checkMultiChoiceAnswer(this.id)" id="multi-choice-btn1" class="multi-choice-btn">Two</button>
-                        <button onclick="checkMultiChoiceAnswer(this.id)" id="multi-choice-btn2" class="multi-choice-btn">Three</button>
-                        <button onclick="checkMultiChoiceAnswer(this.id)" id="multi-choice-btn3" class="multi-choice-btn">Four</button>
-                        <button onclick="checkMultiChoiceAnswer(this.id)" id="multi-choice-btn4" class="multi-choice-btn">Five</button>
-                        <button onclick="checkMultiChoiceAnswer(this.id)" id="multi-choice-btn5" class="multi-choice-btn">Six</button>
-                        <button onclick="checkMultiChoiceAnswer(this.id)" id="multi-choice-btn6" class="multi-choice-btn">Seven</button>
-                        <button onclick="checkMultiChoiceAnswer(this.id)" id="multi-choice-btn7" class="multi-choice-btn">Eight</button>
-                        <button onclick="checkMultiChoiceAnswer(this.id)" id="multi-choice-btn8" class="multi-choice-btn">Nine</button>
-                        <button onclick="checkMultiChoiceAnswer(this.id)" id="multi-choice-btn9" class="multi-choice-btn">Ten</button>
+                        <button onclick="multiChoiceAnswerSelected(this.id)" id="multi-choice-btn0" class="multi-choice-btn">One</button>
+                        <button onclick="multiChoiceAnswerSelected(this.id)" id="multi-choice-btn1" class="multi-choice-btn">Two</button>
+                        <button onclick="multiChoiceAnswerSelected(this.id)" id="multi-choice-btn2" class="multi-choice-btn">Three</button>
+                        <button onclick="multiChoiceAnswerSelected(this.id)" id="multi-choice-btn3" class="multi-choice-btn">Four</button>
+                        <button onclick="multiChoiceAnswerSelected(this.id)" id="multi-choice-btn4" class="multi-choice-btn">Five</button>
+                        <button onclick="multiChoiceAnswerSelected(this.id)" id="multi-choice-btn5" class="multi-choice-btn">Six</button>
+                        <button onclick="multiChoiceAnswerSelected(this.id)" id="multi-choice-btn6" class="multi-choice-btn">Seven</button>
+                        <button onclick="multiChoiceAnswerSelected(this.id)" id="multi-choice-btn7" class="multi-choice-btn">Eight</button>
+                        <button onclick="multiChoiceAnswerSelected(this.id)" id="multi-choice-btn8" class="multi-choice-btn">Nine</button>
+                        <button onclick="multiChoiceAnswerSelected(this.id)" id="multi-choice-btn9" class="multi-choice-btn">Ten</button>
                     </div>
-                    <!-- <button onclick="showQuestion()" id="show-next-question">Show Next Question</button> -->
+                    <div id="answer-result" class="answer-result" style="display: none;">Hello! Here's where you find out whether you were right</div>
                 </div>
             </div>
         </div>
