@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/static/card.css" rel="stylesheet">
+    <script defer src="/static/card.js"></script>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet"> 
+
+
+
+
+
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    
+    <!-- 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">  -->
+
+
+    <title>Matthew Moonen</title>
+</head>
+<body>
+    <div id="lesson-instructions" style="display: none;">
+        <button style="display: none;" onclick="begin()" id="begin">Begin</button>
+    </div>
+
+
+    <div id="lesson-content" class="lesson-content">
+        
+        <!-- <div class="info-and-exit" id="info-and-exit" style="display: none;"> -->
+        <div class="info-and-exit" id="info-and-exit">
+            <div id="info" class="info-exit"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+            </svg></div><div id="exit" class="info-exit"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
+            </svg></div>
+        </div>
+
+        <div>
+            <h1 id="lesson-title" class="lesson-title">Masculine Nominative and Accusative</h1>
+        </div>
+
+
+
+        <!-- <div id="player-progress" class="player-progress" style="display: none;"> -->
+        <div id="player-progress" class="player-progress">
+            <div id="progress" class="progress">Player Progress</div><div id="health" class="health">❤<label for="" id="number-of-hearts"></label></div>
+        </div>
+
+        <!-- <div class="card" id="card" style="display: none;">  -->
+        <div class="card" id="card"> 
+            <div class="card-content" id="card-content">
+                <div id="question-section" class="question-section">
+                    <!-- <h1 id="lesson-title" class="lesson-title">The Lesson Title</h1> -->
+                    <h2 class="question-instructions" id="question-instructions">Do the thing that the instructions say</h2>
+                    <h2 class="the-question" id="the-question">Hier ist die Frage </h2>
+                    <p id="english-translation" class="english-translation">Here is the English Translation</p>
+                </div>
+                <div id="answer-section" class="answer-section">
+                    <div id="multi-choice-btns" class="multi-choice-btns">
+                        <button onclick="checkMultiChoiceAnswer(this.id)" id="multi-choice-btn0" class="multi-choice-btn">One</button>
+                        <button onclick="checkMultiChoiceAnswer(this.id)" id="multi-choice-btn1" class="multi-choice-btn">Two</button>
+                        <button onclick="checkMultiChoiceAnswer(this.id)" id="multi-choice-btn2" class="multi-choice-btn">Three</button>
+                        <button onclick="checkMultiChoiceAnswer(this.id)" id="multi-choice-btn3" class="multi-choice-btn">Four</button>
+                        <button onclick="checkMultiChoiceAnswer(this.id)" id="multi-choice-btn4" class="multi-choice-btn">Five</button>
+                        <button onclick="checkMultiChoiceAnswer(this.id)" id="multi-choice-btn5" class="multi-choice-btn">Six</button>
+                        <button onclick="checkMultiChoiceAnswer(this.id)" id="multi-choice-btn6" class="multi-choice-btn">Seven</button>
+                        <button onclick="checkMultiChoiceAnswer(this.id)" id="multi-choice-btn7" class="multi-choice-btn">Eight</button>
+                        <button onclick="checkMultiChoiceAnswer(this.id)" id="multi-choice-btn8" class="multi-choice-btn">Nine</button>
+                        <button onclick="checkMultiChoiceAnswer(this.id)" id="multi-choice-btn9" class="multi-choice-btn">Ten</button>
+                    </div>
+                    <!-- <button onclick="showQuestion()" id="show-next-question">Show Next Question</button> -->
+                </div>
+            </div>
+        </div>
+        <div id="mobile-answer-section"></div>
+        <div id="user-submit" class="user-submit"><button id="submit-btn" class="submit-btn">Submit Answer</button></div>
+    </div>
+
+
+</body>
+</html>
