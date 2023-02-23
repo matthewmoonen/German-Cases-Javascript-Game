@@ -16,6 +16,7 @@
     --secondarycolourfaded: hsl(212, 59%, 52%, 70%);
     --text100: hsl(180, 0%, 100%, 100%);
     --text80: hsl(180, 0%, 100%, 80%);
+    --text70: hsl(180, 0%, 100%, 70%);
     --text60: hsl(180, 0%, 100%, 60%);
     --text40: hsl(180, 0%, 100%, 40%);
     --text20: hsl(180, 0%, 100%, 20%);
@@ -34,7 +35,6 @@ body {
     display: grid;
     place-items: center;
     background-color: var(--backgroundcolour);
-    /* font-family: 'Open Sans', sans-serif; */
     font-family: 'Roboto', sans-serif;
 }
 .lesson-content {
@@ -65,7 +65,8 @@ body {
     font-weight: normal;
     text-transform: uppercase;
     margin-top: 10px;
-    color: var(--text60);
+    font-weight: 300;
+    color: var(--text70);
 }
 
 .player-progress {
@@ -76,16 +77,17 @@ body {
 .points, .health {
     /* margin: 15px 0 0 0; */
     padding: 15px 20px;
-    width: 50%;
     display: inline-block;
 }
 .points {
     text-align: left;
     color: var(--secondarycolour);
+    width: 65%;
 }
 .health {
     text-align: right;
     color: var(--losecolour);
+    width: 35%;
 }
 .card {
     background-color: var(--lessonbackground);
@@ -94,10 +96,9 @@ body {
     margin-bottom: 2px;
 }
 .lesson-content {
-    /* text-align: right; */
-    /* float: bottom; */
     display: flex;
     flex-direction: column;
+    /* height: 100%; */
 }
 .question-section {
     padding: 10px;
@@ -109,16 +110,22 @@ body {
     text-align: left;
     margin-bottom: 20px;
     color: var(--text80);
+    letter-spacing: 0.03rem;
 }
+
+
 .the-question {
     color: var(--text100);
+    letter-spacing: 0.05rem;
 }
 
 
 .english-translation {
-    font-size: 12px;
-    font-style: italic;
-    color: var(--text80);
+    font-size: 16px;
+    /* font-style: italic; */
+    letter-spacing: .05rem;
+    color: var(--text60);
+    font-weight: 200;
 }
 
 
@@ -136,6 +143,7 @@ body {
     border: var(--text60) solid;
     border-width: 2px;
     border-radius: 8px;
+    letter-spacing: 0.06rem;
 }
 
 .user-submit {
@@ -151,6 +159,7 @@ body {
     color: var(--lessonbackground);
     border: var(--lessonbackground) solid;
     border-radius: 8px;
+    letter-spacing: 0.09rem;
 }
 
 #show-result {
@@ -190,6 +199,10 @@ body {
     .answer-section {
         min-height: 0;
     }
+
+    /* .user-submit {
+
+    } */
 }
 
 @media (min-width: 700px) {

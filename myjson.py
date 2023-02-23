@@ -82,7 +82,7 @@ def lesson_json():
         "hint": "",
         "question": "Der Hund mag den Junge",
         "english": "The dog likes the boy",
-        "options": [["Der Junge", False], ["Der Hund", True], ["Both are nominative", False]],
+        "options": [["Der Hund", True], ["Der Junge", False], ["Both are nominative", False]],
         "type": "multiChoice",
         },
         {
