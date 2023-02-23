@@ -4,11 +4,14 @@
 
     /* --backgroundcolour: hsl(0, 0%, 12%); */
     /* --backgroundcolour: hsl(30, 5%, 9%); */
-    --backgroundcolour: hsl(249, 11%, 12%);
+    /* --backgroundcolour: hsl(249, 11%, 12%); */
+    --backgroundcolour: hsl(197, 59%, 12%);
     /* --lessonbackground: hsl(225, 9%, 17%); */
-    --lessonbackground: hsl(247, 10%, 18%);
-    --wincolour: green;
-    --losecolour: #fc4444;
+    /* --lessonbackground: hsl(247, 10%, 18%); */
+    --lessonbackground: hsl(199, 41%, 17%);
+    --wincolour: hsl(171, 100%, 30%);
+    --losecolour: hsl(0, 97%, 63%, 80%);
+    --losecolourfaded: hsl(0, 97%, 63%, 60%);
     --secondarycolour: hsl(212, 59%, 52%);
     --secondarycolourfaded: hsl(212, 59%, 52%, 70%);
     --text100: hsl(180, 0%, 100%, 100%);
@@ -21,6 +24,11 @@
     box-sizing: border-box;
     margin: 0;
 }
+
+.question-highlight {
+    color: blueviolet;
+}
+
 body {
     height: 100vh;
     display: grid;
@@ -63,7 +71,7 @@ body {
 .player-progress {
     background-color: var(--lessonbackground);
     margin: 8px 12px 12px 12px;
-    border-radius: 15px;
+    border-radius: 16px;
 }
 .points, .health {
     /* margin: 15px 0 0 0; */
@@ -126,13 +134,9 @@ body {
     background: var(--lessonbackground);
     color: var(--text60);
     border: var(--text60) solid;
+    border-width: 2px;
     border-radius: 8px;
 }
-
-
-/* #multi-choice-btn3, #multi-choice-btn4, #multi-choice-btn5, #multi-choice-btn6, #multi-choice-btn7, #multi-choice-btn8, #multi-choice-btn9 {
-    display: none;
-} */
 
 .user-submit {
     /* height: 40px; */
@@ -152,17 +156,34 @@ body {
 #show-result {
     position: absolute;
     top: 100px;
-    left: 20px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
     width: calc(100% - 40px);
+    max-width: 650px;
     text-align: center;
     color: var(--text100);
     height: 300px;
     padding: 30px;
-    border-width: 5px;
+    /* border-width: 5px; */
+    border-radius: 15px;
     border-color: var(--text80);
 }
 
-/* 8 5502 6928 */
+#result-btns {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.btn-play-again, #go-back-btn {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 16px;
+    border: var(--lessonbackground) solid;
+    color: var(--lessonbackground);
+    border-radius: 8px;
+}
 
 
 @media (max-width: 699px) {
@@ -173,8 +194,44 @@ body {
 
 @media (min-width: 700px) {
 
+    .player-progress {
+        background-color: var(--lessonbackground);
+        margin: 12px 50px 12px 50px;
+        border-radius: 20px;
+    }
+
+    .lesson-content {
+        max-width: 750px;
+    }
+
     .mobile-answer-section {
         display: none;
     }
 
+    .points, .health {
+        padding: 17px 40px;
+        font-size: 18px;
+    }
+
+    .card {
+        padding: 19px 30px 30px 30px;
+        margin: 30px;
+    }
+
+}
+
+@media (min-width: 1200px) {
+    .user-submit {
+        display: flex;
+        width: 670px;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+    }
+    #pad {
+        width: 470px;
+    }
+    .submit-btn {
+        width: 200px;
+    }
 }

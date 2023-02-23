@@ -37,6 +37,7 @@ var lessonBackground = bodyStyles.getPropertyValue('--lessonbackground')
 var backgroundColour = bodyStyles.getPropertyValue('--backgroundcolour')
 var winColour = bodyStyles.getPropertyValue('--wincolour')
 var loseColour = bodyStyles.getPropertyValue('--losecolour')
+var loseColourFaded = bodyStyles.getPropertyValue('--losecolourfaded')
 
 // Move answer section in/out of "card" box based on size of window
 window.onresize = moveAnswerSectionMobile;
@@ -89,7 +90,7 @@ function updateLives() {
 }
 
 function updatePoints() {
-    document.getElementById("player-points").innerHTML = pointCounter + "/100"
+    document.getElementById("player-points").innerHTML = pointCounter + "%"
 }
 
 // Show each question
@@ -186,12 +187,12 @@ function multiChoiceAnswerSubmitted(multiChoiceResult) {
     if (multiChoiceResult === true) {
         submitButton.style.backgroundColor = winColour;
     } else {
-        submitButton.style.backgroundColor = loseColour;
+        submitButton.style.backgroundColor = loseColourFaded;
     }
 
     if (multiChoiceResult === false) {
         document.getElementById(currentlySelectedMultiChoiceAnswer).style.color = loseColour;
-        document.getElementById(currentlySelectedMultiChoiceAnswer).style.borderColor = loseColour;
+        document.getElementById(currentlySelectedMultiChoiceAnswer).style.borderColor = loseColourFaded;
     }
 
 }
@@ -251,26 +252,15 @@ function addOrRemoveLives(addOrRemove) {
 
 
 function gameOver(winOrLose) {
-
-    document.getElementById('begin').style.display = "none"
-    document.getElementById('gameovertest').style.display = "none"
-
-
-
-
-
-
-
-
-
     document.getElementById("lesson-content").style.display = "none";
     document.getElementById("show-result").style.display = "block";
 
     if (winOrLose == true) {
-        document.getElementById("your-result").innerHTML = "<h1>Game Over ✨</h1><p>You won!!!</p>";
+        document.getElementById("your-result").innerHTML = "<h1>Game Over ✨</h1><br><p>You won!!!</p><p>Wow! Du bist großartig!</p>";
         document.getElementById("show-result").style.backgroundColor = winColour;
     }
     else {
-        document.getElementById("your-result").innerHTML = "<h1>Game Over</h1><p>Sorry, you lost :(</p>"
+        document.getElementById("your-result").innerHTML = "<h1>Game Over</h1><br><p>Sorry, you lost.</p><p>Better luck next time!</p>"
+        document.getElementById("show-result").style.backgroundColor = loseColourFaded;
     }
 }

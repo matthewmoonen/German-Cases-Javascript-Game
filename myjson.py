@@ -18,7 +18,7 @@ def lesson_json():
         "hint": "",
         "question": "Der Hund jagt den Ball",
         "english": "The dog chases the ball",
-        "options": [["Der Hund", True], ["Den ball", False]],
+        "options": [["Der Hund", True], ["Den Ball", False]],
         "type": "multiChoice",
         },
         {
@@ -31,7 +31,7 @@ def lesson_json():
         "type": "multiChoice",
         },
         {
-        "questionID": "AAB01",
+        "questionID": "AAA03",
         "instructions": "Choose the <label class='question-highlight'>nominative</label> case",
         "hint": "",
         "question": "Der Hund beißt den Mann",
@@ -39,7 +39,7 @@ def lesson_json():
         "options": [["Der Hund", True], ["Den Mann", False],],
         "type": "multiChoice",
         },
-        {"questionID": "AAB02",
+        {"questionID": "AAA04",
         "instructions": "Choose the <label class='question-highlight'>accusative</label> case",
         "hint": "",
         "question": "Der Hund beißt den Mann",
@@ -48,56 +48,45 @@ def lesson_json():
         "type": "multiChoice",
         },
         {
-        "questionID": "AAC01",
+        "questionID": "AAA05",
         "instructions": "Choose the <label class='question-highlight'>nominative</label> case",
         "hint": "",
         "question": "Der Hund und der Mann",
         "english": "The dog and the man",
-        "options": [["Both are nominative", True], ["Der Hund", False], ["Der Mann", False]],
+        "options": [["Der Hund", False], ["Der Mann", False], ["Both are nominative", True]],
         "type": "multiChoice",
         },
 
         {
-        "questionID": "AAC01",
+        "questionID": "AAA06",
         "instructions": "Choose the <label class='question-highlight'>accusative</label> case",
         "hint": "",
         "question": "Leg den Ball auf den Tisch",
         "english": "Put the ball on the table",
-        "options": [["Both are accusative", True], ["Den Ball", False], ["Den Tisch", False]],
+        "options": [["Den Ball", False], ["Den Tisch", False], ["Both are accusative", True]],
         "type": "multiChoice",
         },
 
         {
-        "questionID": "AAD01",
+        "questionID": "AAA07",
         "instructions": "Choose the <label class='question-highlight'>nominative</label> case",
         "hint": "",
         "question": "Der Junge mag den Hund",
         "english": "The boy likes the dog",
-        "options": [["Both are nominative", False], ["Der Junge", True], ["Der Hund", False]],
-        "type": "multiChoice",
-        },
-
-
-        {
-        "questionID": "AAD01",
-        "instructions": "Choose the <label class='question-highlight'>nominative</label> case",
-        "hint": "",
-        "question": "Der Junge mag den Hund",
-        "english": "The boy likes the dog",
-        "options": [["Both are nominative", False], ["Der Junge", True], ["Den Hund", False]],
+        "options": [["Der Junge", True], ["Den Hund", False], ["Both are nominative", False]],
         "type": "multiChoice",
         },
         {
-        "questionID": "AAE01",
+        "questionID": "AAA08",
         "instructions": "Choose the <label class='question-highlight'>nominative</label> case",
         "hint": "",
         "question": "Der Hund mag den Junge",
         "english": "The dog likes the boy",
-        "options": [["Both are nominative", False], ["Der Junge", False], ["Der Hund", True]],
+        "options": [["Der Junge", False], ["Der Hund", True], ["Both are nominative", False]],
         "type": "multiChoice",
         },
         {
-        "questionID": "AAD01",
+        "questionID": "AAA09",
         "instructions": "Choose the <label class='question-highlight'>nominative</label> definite article",
         "hint": "",
         "question": "Wo ist ___ Mann?",
@@ -108,7 +97,7 @@ def lesson_json():
 
 
         {
-        "questionID": "AAC01",
+        "questionID": "AAA10",
         "instructions": "Choose the correct <label class='question-highlight'>definite article</label>",
         "hint": "",
         "question": "Der Junge und ___ Hund",
@@ -118,8 +107,8 @@ def lesson_json():
         },
 
         {
-        "questionID": "AAE01",
-        "instructions": "Choose the <b>nominative</b> case",
+        "questionID": "AAA11",
+        "instructions": "Choose the <label class='question-highlight'>nominative</label> case",
         "hint": "",
         "question": "Der Mann beißt den Hund!",
         "english": "The man bites the dog!",
@@ -127,8 +116,8 @@ def lesson_json():
         "type": "multiChoice",
         },
         {
-        "questionID": "AAF01",
-        "instructions": "Choose the <b>accusative</b> case",
+        "questionID": "AAA12",
+        "instructions": "Choose the <label class='question-highlight'>accusative</label> case",
         "hint": "",
         "question": "Der Hund beißt den Mann",
         "english": "The dog bites the man",
