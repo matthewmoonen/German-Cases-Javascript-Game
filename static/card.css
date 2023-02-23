@@ -3,8 +3,10 @@
     --fw-bold: 700;
 
     /* --backgroundcolour: hsl(0, 0%, 12%); */
-    --backgroundcolour: hsl(30, 5%, 9%);
-    --lessonbackground: hsl(225, 9%, 17%);
+    /* --backgroundcolour: hsl(30, 5%, 9%); */
+    --backgroundcolour: hsl(249, 11%, 12%);
+    /* --lessonbackground: hsl(225, 9%, 17%); */
+    --lessonbackground: hsl(247, 10%, 18%);
     --wincolour: green;
     --losecolour: #fc4444;
     --secondarycolour: hsl(212, 59%, 52%);
@@ -147,6 +149,22 @@ body {
     border-radius: 8px;
 }
 
+#show-result {
+    position: absolute;
+    top: 100px;
+    left: 20px;
+    width: calc(100% - 40px);
+    text-align: center;
+    color: var(--text100);
+    height: 300px;
+    padding: 30px;
+    border-width: 5px;
+    border-color: var(--text80);
+}
+
+/* 8 5502 6928 */
+
+
 @media (max-width: 699px) {
     .answer-section {
         min-height: 0;
@@ -158,8 +176,5 @@ body {
     .mobile-answer-section {
         display: none;
     }
-
-
-
 
 }

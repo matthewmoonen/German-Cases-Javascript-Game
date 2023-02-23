@@ -39,8 +39,8 @@
 <body>
     <div id="lesson-instructions">
         <button style="display: none;" onclick="begin()" id="begin">Begin</button>
+        <button id="gameovertest" onclick="gameOver(true)">Go to game over</button>
     </div>
-
 
     <div style="display: none;" id="lesson-content" class="lesson-content">
         
@@ -91,6 +91,16 @@
         </div>
         <div id="mobile-answer-section"></div>
         <div id="user-submit" class="user-submit"><button id="submit-btn" class="submit-btn">Submit Answer</button></div>
+    </div>
+
+    <div class="show-result" id="show-result" style="display: none;">
+        <div id="your-result"></div>
+        <br>
+        <div id="result-btns">
+            <button class="btn-play-again" id="btn-play-again" onClick="window.location.reload();">Play Again</button>
+            <!-- TODO: FIX -->
+            <button id="go-back-btn" onclick="window.location.href='/code';">Go Back</button>
+        </div>
     </div>
 
 

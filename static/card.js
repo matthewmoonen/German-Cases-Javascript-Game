@@ -143,6 +143,7 @@ document.getElementById("submit-btn").addEventListener("click", function() {
 }
 )
 
+
 function multiChoiceAnswerSelected(chosenAnswer) {
     currentlySelectedMultiChoiceAnswer = chosenAnswer
 
@@ -176,14 +177,16 @@ function multiChoiceAnswerSubmitted(multiChoiceResult) {
         button.style.color = text20;
         button.style.borderColor = text20;
     }
-
-    document.getElementById("submit-btn").innerText = "Next Question";
     document.getElementById(correctMultiChoiceAnswer).style.color = winColour;
     document.getElementById(correctMultiChoiceAnswer).style.borderColor = winColour;
 
-    if (multiChoiceResult === true) {
+    const submitButton = document.getElementById("submit-btn")
+    submitButton.innerText = "Next Question";
 
-        console.log('true')
+    if (multiChoiceResult === true) {
+        submitButton.style.backgroundColor = winColour;
+    } else {
+        submitButton.style.backgroundColor = loseColour;
     }
 
     if (multiChoiceResult === false) {
@@ -248,13 +251,24 @@ function addOrRemoveLives(addOrRemove) {
 
 
 function gameOver(winOrLose) {
-    document.getElementById("question-and-answer").style.display = "none";
-    document.getElementById("correct-answer").style.display = "none";
-    document.getElementById("incorrect-answer").style.display = "none";
+
+    document.getElementById('begin').style.display = "none"
+    document.getElementById('gameovertest').style.display = "none"
+
+
+
+
+
+
+
+
+
+    document.getElementById("lesson-content").style.display = "none";
     document.getElementById("show-result").style.display = "block";
 
     if (winOrLose == true) {
-        document.getElementById("your-result").innerHTML = "<h1>Game Over</h1><p>You won!!!</p>"
+        document.getElementById("your-result").innerHTML = "<h1>Game Over ✨</h1><p>You won!!!</p>";
+        document.getElementById("show-result").style.backgroundColor = winColour;
     }
     else {
         document.getElementById("your-result").innerHTML = "<h1>Game Over</h1><p>Sorry, you lost :(</p>"
