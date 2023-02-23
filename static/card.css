@@ -42,8 +42,11 @@ body {
     position: relative;
     font-size: 16px;
     width: 100%;
-    padding: 45px 12px 45px 12px;
-    height: 100vh;
+    padding: 10px 12px 45px 12px;
+    /* height: 100vh; */
+    height: calc(100vh - 100px)
+
+    /* height: 100%; */
 }
 .info-and-exit {
     color: var(--text40);
@@ -64,7 +67,7 @@ body {
     font-size: 16px;
     font-weight: normal;
     text-transform: uppercase;
-    margin-top: 10px;
+    margin-top: 5px;
     font-weight: 300;
     color: var(--text70);
 }
@@ -95,11 +98,7 @@ body {
     border-color: var(--secondarycolour);
     margin-bottom: 2px;
 }
-.lesson-content {
-    display: flex;
-    flex-direction: column;
-    /* height: 100%; */
-}
+
 .question-section {
     padding: 10px;
     min-height: 135px;
@@ -150,6 +149,10 @@ body {
     /* height: 40px; */
     width: 100%;
     margin-top: auto;
+    padding-bottom: 24px;
+    padding-left: 12px;
+    padding-right: 12px;
+    transform: translateZ(99px);
 }
 .submit-btn {
     width: 100%;
