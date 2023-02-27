@@ -20,6 +20,7 @@
     --text60: hsl(180, 0%, 100%, 60%);
     --text40: hsl(180, 0%, 100%, 40%);
     --text20: hsl(180, 0%, 100%, 20%);
+    --app-height: 100%;
 }
 *, *::before, *::after {
     box-sizing: border-box;
@@ -31,23 +32,34 @@
 }
 
 body {
-    height: 100vh;
+    /* height: 100vh; */
+    height: var(--app-height);
     display: grid;
     place-items: center;
     background-color: var(--backgroundcolour);
     font-family: 'Roboto', sans-serif;
 }
-.lesson-content, .lesson-instructions {
+.lesson-content {
     text-align: center;
     position: relative;
     font-size: 16px;
     width: 100%;
     padding: 10px 12px 45px 12px;
     /* height: 100vh; */
-    height: calc(100vh - 100px)
+    /* height: calc(100vh - 100px) */
 
     /* height: 100%; */
+    height: calc(var(--app-height) - 64px);
 }
+
+.lesson-instructions {
+    text-align: center;
+    position: relative;
+    font-size: 16px;
+    width: 100%;
+    padding: 10px 12px 45px 12px;
+}
+
 
 .instructions-title {
     /* color: var(--text100);
@@ -86,6 +98,7 @@ h3 {
 
 .info-and-exit {
     color: var(--text40);
+    padding-top: 8px;
 }
 #info, #exit {
     margin: 0;
@@ -185,10 +198,12 @@ h3 {
     /* height: 40px; */
     width: 100%;
     margin-top: auto;
-    padding-bottom: 24px;
+    padding-bottom: 19px;
     padding-left: 12px;
     padding-right: 12px;
+    padding-top: 6px;
     transform: translateZ(99px);
+    background-color: var(--backgroundcolour);
 }
 .submit-btn, #begin {
     width: 100%;
