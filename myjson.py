@@ -11,6 +11,8 @@ def lesson_json():
         "posPointAggregate": 10,
         "negPointAggregate": 4,
         "lives": 5,
+        "instructions": "The nominative case is the <em>subject</em> of a sentence; while the accusative is the <em>direct object</em>:</p><p><ul><li>Nominative => takes action</li><li>Accusative => receives action</li></ul><br>For masculine nouns:<ul><li>Der => Nominative</li><li>Den => Accusative</li></ul><br><h3>Example</h3><span style='color: blueviolet;'>The boy <em>(nominative)</em></span> throws <span style='color: yellow;'>the ball <em>(accusative)</em></span>.<br><span style='font-size: 0.85em'><em>In German: <span style='color: blueviolet;'>Der Junge</span> wirft <span style='color: yellow;'>den Ball</span></em></span>.",
+        "reminder": "<ul><li>Nominative => takes action</li><li>Accusative => receives action</li></ul><br>For masculine nouns:<ul><li>Der => Nominative</li><li>Den => Accusative</li></ul>",
         },
         {
         "questionID": "AAA01",
@@ -132,10 +134,3 @@ def lesson_json():
 
 if __name__ == "__main__":
     main()
-
-
-    # This lesson tests your knowledge of the nominative and accusative case and masculine definite articles. 
-
-    # 
-
-    # The 

@@ -67,6 +67,8 @@ fetchlessonContentJSON().then(lesson => {
     const lessonTitle = lessonContent[0]["lessonTitle"]
     document.getElementById("lesson-title").innerHTML = lessonTitle
     document.getElementById("page-title").textContent = "Matthew Moonen - " + lessonTitle;
+    document.getElementById('instructions-title').innerText = lessonContent[0]["lessonTitle"]
+    document.getElementById('instructions-body').innerHTML = lessonContent[0]["instructions"]
     
     posPointAggregate = lessonContent[0]["posPointAggregate"];
     negPointAggregate = lessonContent[0]["negPointAggregate"];
@@ -75,12 +77,15 @@ fetchlessonContentJSON().then(lesson => {
 
 
 
-// Show start page
+
+// Show first 
 function begin() {
     updateLives()
     updatePoints()
     document.getElementById("begin").style.display = "none";
     document.getElementById("lesson-content").style.display = "block";
+    document.getElementById("lesson-instructions").style.display = "none";
+    document.getElementById("submit-btn").style.display = "block";
     showQuestion()
 }
 
@@ -253,6 +258,7 @@ function addOrRemoveLives(addOrRemove) {
 
 function gameOver(winOrLose) {
     document.getElementById("lesson-content").style.display = "none";
+    document.getElementById("user-submit").style.display = "none";
     document.getElementById("show-result").style.display = "block";
 
     if (winOrLose == true) {

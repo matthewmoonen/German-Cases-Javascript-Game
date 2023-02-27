@@ -37,7 +37,7 @@ body {
     background-color: var(--backgroundcolour);
     font-family: 'Roboto', sans-serif;
 }
-.lesson-content {
+.lesson-content, .lesson-instructions {
     text-align: center;
     position: relative;
     font-size: 16px;
@@ -48,6 +48,42 @@ body {
 
     /* height: 100%; */
 }
+
+.instructions-title {
+    /* color: var(--text100);
+    font-size: 21px;
+    font-weight: 500; */
+
+    font-weight: normal;
+    font-size: 1.4rem;
+    /* text-align: left; */
+    margin-bottom: 8px;
+    color: var(--text100);
+    letter-spacing: 0.03rem;
+}
+h3 {
+    /* color: var(--text100);
+    font-size: 21px;
+    font-weight: 500; */
+
+    /* font-weight: normal; */
+    font-size: 1.2rem;
+    /* text-align: left; */
+    margin-bottom: 20px;
+    color: var(--text100);
+    letter-spacing: 0.04rem;
+    font-style: italic;
+    font-style: oblique;
+}
+
+.instructions-body {
+    font-weight: normal;
+    text-align: left;
+    margin: 20px 0 50px 0;
+    color: var(--text70);
+    letter-spacing: 0.03rem;
+}
+
 .info-and-exit {
     color: var(--text40);
 }
@@ -154,7 +190,7 @@ body {
     padding-right: 12px;
     transform: translateZ(99px);
 }
-.submit-btn {
+.submit-btn, #begin {
     width: 100%;
     padding: 10px;
     font-size: 18px;
@@ -163,6 +199,12 @@ body {
     border: var(--lessonbackground) solid;
     border-radius: 8px;
     letter-spacing: 0.09rem;
+}
+
+#begin {
+    color: var(--text100);
+    border: var(--text60) solid;
+    background-color: var(--secondarycolour);
 }
 
 #show-result {
@@ -216,7 +258,7 @@ body {
         border-radius: 20px;
     }
 
-    .lesson-content {
+    .lesson-content, .lesson-instructions {
         max-width: 750px;
     }
 
@@ -247,7 +289,7 @@ body {
     #pad {
         width: 470px;
     }
-    .submit-btn {
+    .submit-btn, #begin {
         width: 200px;
     }
 }
