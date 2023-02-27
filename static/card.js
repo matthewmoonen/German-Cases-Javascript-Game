@@ -172,7 +172,6 @@ function showMultiChoice(currentQuestion) {
 
 document.getElementById("submit-btn").addEventListener("click", function() {
     if (currentQuestionNumber === 0) {
-        console.log("here we go!");
         begin();
     } else {
         userSubmitAnswer(currentlySelectedMultiChoiceAnswer);
@@ -237,14 +236,17 @@ function userSubmitAnswer(userAnswer) {
     if (userAnswer !== "submit-btn") {
         if (currentlySelectedMultiChoiceAnswer === correctMultiChoiceAnswer) {
             currentlySelectedMultiChoiceAnswer = "next-question";
+            console.log('Sehr Gut!')
             addOrRemovePoints(true)
             multiChoiceAnswerSubmitted(true)
 
         } else if (currentlySelectedMultiChoiceAnswer === "next-question") {
             currentlySelectedMultiChoiceAnswer = "submit-btn"
             document.getElementById("submit-btn").innerText = "Submit Answer"
+            console.log('Clicked Next Button')
             showQuestion();
         } else {
+            console.log('Leider Nicht')
             addOrRemovePoints(false)
             addOrRemoveLives(false)
             multiChoiceAnswerSubmitted(false)
