@@ -52,9 +52,10 @@ if($(window).width() < 700){
 
 
 const appHeight = () => {
-    const doc = document.documentElement
-    
-    doc.style.setProperty("--app-height", `${window.innerHeight}px`)
+    const doc = document.documentElement;
+    const windowHeight = window.innerHeight - 70;
+
+    doc.style.setProperty("--app-height", `${windowHeight}px`)
    }
    window.addEventListener("resize", appHeight)
    appHeight()
