@@ -8,38 +8,16 @@
     <link rel="stylesheet" href="/static/card.css" rel="stylesheet">
     <script defer src="/static/card.js"></script>
 
-
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-
-
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400&display=swap" rel="stylesheet">
 
-    
-
-
-
-
-
     <title id="page-title">Matthew Moonen</title>
 </head>
 <body>
-    <div id="lesson-instructions" class="lesson-instructions">
-        <div id="instructions" class="instructions">
-            <h1 id="instructions-title" class="instructions-title"></h1>
-            <hr>
-            <p id="instructions-body" class="instructions-body"></p>
-            <!-- <div id="instructions-title" class="instructions-title"></div>
-            <div id="instructions-body" class="instructions-body"></div> -->
-        </div>
-        <!-- <button style="display: none;" onclick="begin()" id="begin">Begin</button> -->
-    </div>
-
-    <div style="display: none;" id="lesson-content" class="lesson-content">
-        
+    <div id="lesson-content" class="lesson-content">
 
         <div class="info-and-exit" id="info-and-exit">
             <div id="info" class="info-exit"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
@@ -53,33 +31,34 @@
         <div>
             <h1 id="lesson-title" class="lesson-title"></h1>
         </div>
-
-
-
-        <div id="player-progress" class="player-progress">
+        <div id="instructions-padding-top" class="instructions-padding-top"></div>
+        
+        <div id="player-progress" class="player-progress" style="display: none;">
             <div id="points" class="points">Progress: <label for="" id="player-points"></label></div><div id="health" class="health"><label for="" id="player-health"></label> ❤<label for="" id="number-of-hearts"></label></div>
         </div>
-
         
         <div class="card" id="card"> 
-            <div class="card-content" id="card-content">
+            <div id="lesson-instructions" class="lesson-instructions">
+                    <div id="instructions-body" class="instructions-body"></div>
+            </div>
+            <div class="card-content" id="card-content" style="display: none;">
                 <div id="question-section" class="question-section">
                     <h2 class="question-instructions" id="question-instructions"></h2>
                     <h2 class="the-question" id="the-question"></h2>
                     <p id="english-translation" class="english-translation"></p>
                 </div>
-                <div id="answer-section" class="answer-section">
+                <div id="answer-section" class="answer-section" style="display: none;">
                     <div id="multi-choice-btns" class="multi-choice-btns">
-                        <button onclick="multiChoiceAnswerSelected(this.id)" id="multi-choice-btn0" class="multi-choice-btn">One</button>
-                        <button onclick="multiChoiceAnswerSelected(this.id)" id="multi-choice-btn1" class="multi-choice-btn">Two</button>
-                        <button onclick="multiChoiceAnswerSelected(this.id)" id="multi-choice-btn2" class="multi-choice-btn">Three</button>
-                        <button onclick="multiChoiceAnswerSelected(this.id)" id="multi-choice-btn3" class="multi-choice-btn">Four</button>
-                        <button onclick="multiChoiceAnswerSelected(this.id)" id="multi-choice-btn4" class="multi-choice-btn">Five</button>
-                        <button onclick="multiChoiceAnswerSelected(this.id)" id="multi-choice-btn5" class="multi-choice-btn">Six</button>
-                        <button onclick="multiChoiceAnswerSelected(this.id)" id="multi-choice-btn6" class="multi-choice-btn">Seven</button>
-                        <button onclick="multiChoiceAnswerSelected(this.id)" id="multi-choice-btn7" class="multi-choice-btn">Eight</button>
-                        <button onclick="multiChoiceAnswerSelected(this.id)" id="multi-choice-btn8" class="multi-choice-btn">Nine</button>
-                        <button onclick="multiChoiceAnswerSelected(this.id)" id="multi-choice-btn9" class="multi-choice-btn">Ten</button>
+                        <button onclick="multiChoiceAnswerSelected(this.id)" id="multi-choice-btn0" class="multi-choice-btn"></button>
+                        <button onclick="multiChoiceAnswerSelected(this.id)" id="multi-choice-btn1" class="multi-choice-btn"></button>
+                        <button onclick="multiChoiceAnswerSelected(this.id)" id="multi-choice-btn2" class="multi-choice-btn"></button>
+                        <button onclick="multiChoiceAnswerSelected(this.id)" id="multi-choice-btn3" class="multi-choice-btn"></button>
+                        <button onclick="multiChoiceAnswerSelected(this.id)" id="multi-choice-btn4" class="multi-choice-btn"></button>
+                        <button onclick="multiChoiceAnswerSelected(this.id)" id="multi-choice-btn5" class="multi-choice-btn"></button>
+                        <button onclick="multiChoiceAnswerSelected(this.id)" id="multi-choice-btn6" class="multi-choice-btn"></button>
+                        <button onclick="multiChoiceAnswerSelected(this.id)" id="multi-choice-btn7" class="multi-choice-btn"></button>
+                        <button onclick="multiChoiceAnswerSelected(this.id)" id="multi-choice-btn8" class="multi-choice-btn"></button>
+                        <button onclick="multiChoiceAnswerSelected(this.id)" id="multi-choice-btn9" class="multi-choice-btn"></button>
                     </div>
                     <div id="answer-result" class="answer-result" style="display: none;">Hello! Here's where you find out whether you were right</div>
                 </div>
@@ -87,8 +66,6 @@
         </div>
         <div id="mobile-answer-section"></div>
     </div>
-    
-    <div id="user-submit" class="user-submit"><div id="pad"></div><button id="submit-btn" class="submit-btn">Begin</button></div>
     
     <div class="show-result" id="show-result" style="display: none;">
         <div id="your-result"></div>
@@ -99,7 +76,8 @@
             <button id="go-back-btn" onclick="window.location.href='/code';">Go Back</button>
         </div>
     </div>
-
+    
+    <div id="user-submit" class="user-submit"><button id="submit-btn" class="submit-btn">Begin</button></div>
 
 </body>
 </html>

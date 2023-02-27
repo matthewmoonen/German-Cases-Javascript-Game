@@ -39,18 +39,28 @@ var winColour = bodyStyles.getPropertyValue('--wincolour')
 var loseColour = bodyStyles.getPropertyValue('--losecolour')
 var loseColourFaded = bodyStyles.getPropertyValue('--losecolourfaded')
 
-// Move answer section in/out of "card" box based on size of window
+// Move answer section into "card" box on tablet/laptop/desktop
+// Move submit button directly under card on laptop/desktop.
 window.onresize = moveAnswerSectionMobile;
 window.onload = moveAnswerSectionMobile;
 function moveAnswerSectionMobile() {
-if($(window).width() < 700){
-    $('#answer-section').appendTo('#mobile-answer-section');
-  } else {
-    $('#answer-section').appendTo('#card-content');
-  }
+    if($(window).width() < 700){
+        $('#answer-section').appendTo('#mobile-answer-section');
+    } else {
+        $('#answer-section').appendTo('#card-content');
+    }
+    if($(window).width() > 1023){
+        $('#submit-btn').appendTo('#lesson-content');
+        document.getElementById('user-submit').style.display = 'none'
+    } else {
+        $('#submit-btn').appendTo('#user-submit');
+        document.getElementById('user-submit').style.display = 'block'
+
+    }
 }
 
 
+// Fixes issue on mobile Safari and Chrome where bottom of page is covered by browser's navbar.
 const appHeight = () => {
     const doc = document.documentElement;
     const windowHeight = window.innerHeight - 70;
@@ -73,11 +83,9 @@ fetchlessonContentJSON().then(lesson => {
     // Update above declared lesson variables as per information from JSON.
     // Update HTML to display content relevant to current lesson.
     lessonContent = lesson;
-    // document.getElementById("begin").style.display = "block";
     const lessonTitle = lessonContent[0]["lessonTitle"]
     document.getElementById("lesson-title").innerHTML = lessonTitle
     document.getElementById("page-title").textContent = "Matthew Moonen - " + lessonTitle;
-    document.getElementById('instructions-title').innerText = lessonContent[0]["lessonTitle"]
     document.getElementById('instructions-body').innerHTML = lessonContent[0]["instructions"]
     
     posPointAggregate = lessonContent[0]["posPointAggregate"];
@@ -91,9 +99,15 @@ fetchlessonContentJSON().then(lesson => {
 // Show first 
 function begin() {
     document.getElementById("submit-btn").innerText = "Submit Answer"
+    document.getElementById("answer-section").style.display = "block";
+    document.getElementById("info").style.display = "inline-block";
+    document.getElementById("player-progress").style.display = "block";
+    document.getElementById("card-content").style.display = "block";
+    document.getElementById("instructions-padding-top").style.display = "none";
+
     updateLives()
     updatePoints()
-    // document.getElementById("begin").style.display = "none";
+
     document.getElementById("lesson-content").style.display = "block";
     document.getElementById("lesson-instructions").style.display = "none";
     document.getElementById("submit-btn").style.display = "block";
@@ -173,7 +187,6 @@ function multiChoiceAnswerSelected(chosenAnswer) {
         const buttonID = "multi-choice-btn" + i;
         const button = document.getElementById(buttonID);
         button.style.color = text100;
-        // button.style.backgroundColor = lessonBackground;
         button.style.borderColor = text60;
     }
 

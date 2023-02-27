@@ -33,7 +33,7 @@ body {
     background-color: var(--backgroundcolour);
     font-family: 'Roboto', sans-serif;
 }
-.lesson-content, .instructions {
+.lesson-content {
     text-align: center;
     position: relative;
     font-size: 16px;
@@ -44,25 +44,14 @@ body {
 
 .lesson-instructions {
     text-align: center;
-    position: relative;
-    font-size: 16px;
-    width: 100%;
-    padding: 10px 12px 45px 12px;
+    /* position: relative; */
+    /* font-size: 16px; */
+    /* width: 100%; */
+    /* padding: 10px 12px 45px 12px; */
 }
 
 
-.instructions-title {
-    /* color: var(--text100);
-    font-size: 21px;
-    font-weight: 500; */
 
-    font-weight: normal;
-    font-size: 1.4rem;
-    /* text-align: left; */
-    margin-bottom: 8px;
-    color: var(--text100);
-    letter-spacing: 0.03rem;
-}
 h3 {
     /* color: var(--text100);
     font-size: 21px;
@@ -81,14 +70,14 @@ h3 {
 .instructions-body {
     font-weight: normal;
     text-align: left;
-    margin: 20px 0 50px 0;
+    /* margin: 20px 0 50px 0; */
     color: var(--text70);
     letter-spacing: 0.03rem;
 }
 
 .info-and-exit {
     color: var(--text40);
-    padding-top: 8px;
+    margin-top: 8px;
 }
 #info, #exit {
     margin: 0;
@@ -138,7 +127,7 @@ h3 {
     margin-bottom: 2px;
 }
 
-.question-section {
+.question-section, .lesson-instructions {
     padding: 10px;
     min-height: 135px;
 }
@@ -244,12 +233,23 @@ h3 {
         min-height: 0;
     }
 
-    /* .user-submit {
+    .lesson-instructions {
+        padding: 15px;
+    }
 
-    } */
+    .instructions-padding-top {
+        height: 16px;
+    }
+
 }
 
 @media (min-width: 700px) {
+
+
+
+    .lesson-title {
+        font-size: 18px;
+    }
 
     .player-progress {
         background-color: var(--lessonbackground);
@@ -274,24 +274,26 @@ h3 {
         padding: 19px 30px 30px 30px;
         margin: 30px;
     }
+    .info-and-exit {
+        margin: 20px 20px 0 20px;
+    }
 
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1024px) {
 
-    
+    .lesson-title {
+        font-size: 19px;
+    }
 
-    .user-submit {
-        display: flex;
-        width: 670px;
-        margin: 0 auto;
-        left: 0;
-        right: 0;
+    .info-and-exit {
+        margin-top: 50px;
     }
-    #pad {
-        width: 480px;
-    }
-    .submit-btn, #begin {
+
+    .submit-btn {
         width: 200px;
+        float: right;
+        margin-right: 30px;
+        /* transform: translateX(232px); */
     }
 }
