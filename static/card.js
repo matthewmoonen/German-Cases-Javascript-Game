@@ -91,6 +91,7 @@ fetchlessonContentJSON().then(lesson => {
     posPointAggregate = lessonContent[0]["posPointAggregate"];
     negPointAggregate = lessonContent[0]["negPointAggregate"];
     lives = lessonContent[0]["lives"];
+    document.getElementById("lesson-content").style.display = 'block';
 });
 
 
