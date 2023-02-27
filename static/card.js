@@ -55,7 +55,6 @@ function moveAnswerSectionMobile() {
     } else {
         $('#submit-btn').appendTo('#user-submit');
         document.getElementById('user-submit').style.display = 'block'
-
     }
 }
 
@@ -64,8 +63,9 @@ function moveAnswerSectionMobile() {
 const appHeight = () => {
     const doc = document.documentElement;
     const windowHeight = window.innerHeight - 70;
-
     doc.style.setProperty("--app-height", `${windowHeight}px`)
+    const windowHeightNotchPhones = window.innerHeight - 125;
+    doc.style.setProperty("--app-height-notch-phones", `${windowHeightNotchPhones}px`) 
    }
    window.addEventListener("resize", appHeight)
    appHeight()
