@@ -73,7 +73,7 @@ fetchlessonContentJSON().then(lesson => {
     // Update above declared lesson variables as per information from JSON.
     // Update HTML to display content relevant to current lesson.
     lessonContent = lesson;
-    document.getElementById("begin").style.display = "block";
+    // document.getElementById("begin").style.display = "block";
     const lessonTitle = lessonContent[0]["lessonTitle"]
     document.getElementById("lesson-title").innerHTML = lessonTitle
     document.getElementById("page-title").textContent = "Matthew Moonen - " + lessonTitle;
@@ -90,9 +90,10 @@ fetchlessonContentJSON().then(lesson => {
 
 // Show first 
 function begin() {
+    document.getElementById("submit-btn").innerText = "Submit Answer"
     updateLives()
     updatePoints()
-    document.getElementById("begin").style.display = "none";
+    // document.getElementById("begin").style.display = "none";
     document.getElementById("lesson-content").style.display = "block";
     document.getElementById("lesson-instructions").style.display = "none";
     document.getElementById("submit-btn").style.display = "block";
@@ -155,7 +156,12 @@ function showMultiChoice(currentQuestion) {
 
 
 document.getElementById("submit-btn").addEventListener("click", function() {
-    userSubmitAnswer(currentlySelectedMultiChoiceAnswer);
+    if (currentQuestionNumber === 0) {
+        console.log("here we go!");
+        begin();
+    } else {
+        userSubmitAnswer(currentlySelectedMultiChoiceAnswer);
+    }
 }
 )
 
