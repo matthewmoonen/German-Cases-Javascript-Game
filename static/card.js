@@ -44,7 +44,7 @@ var loseColourFaded = bodyStyles.getPropertyValue('--losecolourfaded')
 window.onresize = moveAnswerSectionMobile;
 window.onload = moveAnswerSectionMobile;
 function moveAnswerSectionMobile() {
-    if($(window).width() < 700){
+    if($(window).width() < 700 || $(window).height() < 500){
         $('#answer-section').appendTo('#mobile-answer-section');
     } else {
         $('#answer-section').appendTo('#card-content');
