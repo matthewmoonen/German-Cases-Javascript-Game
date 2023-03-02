@@ -1,6 +1,6 @@
 # German Cases JavaScript Game
 
-This is a companion to an [earlier Python game](https://github.com/matthewmoonen/German-Nouns-Python-Game) that teaches German cases.
+This is a companion to an [earlier command-line Python game](https://github.com/matthewmoonen/German-Nouns-Python-Game) that teaches German cases.
 
 It runs in the browser, utilising primarily JavaScript, with a little bit of jQuery.
 
